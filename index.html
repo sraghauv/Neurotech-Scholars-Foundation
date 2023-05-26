@@ -11,11 +11,26 @@
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
 /* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
+.w3-sidebar {width: 120px;background: #222; justify-content: center;}
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+.back-img{
+    background-image: url("main.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 758px;
+    width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: none;
+    margin-bottom: none;
+    filter: grayscale(88%) brightness(80%);
+}
+header{
+    padding-top: none;
+}
 </style>
 </head>
 <body class="w3-black">
@@ -24,19 +39,19 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <!--img src="/w3images/avatar_smoke.jpg" style="width:100%"--->
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
     <i class="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>PAGE</p>
+  <a href="#teams" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
+    <i class="fa fa-users w3-xxlarge"></i>
+    <p>TEAMS</p>
   </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
   </a>
@@ -55,10 +70,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+  <header class="w3-container w3-center w3-black" id="home">
+    <div class="back-img">
+
     <h1 class="w3-jumbo"><span class="w3-hide-small">Longhorn</span> NeuroTech</h1>
     <p>quick description line.</p>
-    <img src="/w3images/man_smoke.jpg" alt="picture" class="w3-image" width="992" height="1108">
+    <!--img src="main.jpg" alt="picture" class="w3-image" width="992" height="1108"-->
+    </div>
   </header>
 
   <!-- About Section -->
@@ -106,9 +124,19 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <i class="fa fa-download"></i> Download Resume
     </button>-->
     
+    <!-- Testimonials -->
+    <h3 class="w3-padding-24 w3-text-light-grey"> Officers</h3>  
+    <img src="/w3images/bandmember.jpg" alt="picture" class="w3-left w3-circle w3-margin-right" style="width:80px">
+        <p><span class="w3-large w3-margin-right"> President</span> </p>
+        <p> description</p><br>
+        
+    <img src="/w3images/avatar_g2.jpg" alt="picture" class="w3-left w3-circle w3-margin-right" style="width:80px">
+        <p><span class="w3-large w3-margin-right"> Vice President</span> </p>
+        <p> description</p>
+
     <!-- Grid for pricing tables -->
     <h3 class="w3-padding-16 w3-text-light-grey">Teams</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-row-padding" style="margin:0 -16px" id="teams">
       <div class="w3-half w3-margin-bottom">
         <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
           <li class="w3-dark-grey w3-xlarge w3-padding-32">Hardware</li>
@@ -145,15 +173,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <!-- End Grid/Pricing tables -->
     </div>
     
-    <!-- Testimonials -->
-    <h3 class="w3-padding-24 w3-text-light-grey"> something else here</h3>  
-    <img src="/w3images/bandmember.jpg" alt="picture" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right"> Title 1</span> </p>
-    <p> description</p><br>
-    
-    <img src="/w3images/avatar_g2.jpg" alt="picture" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right"> Title 2</span> </p>
-    <p> description</p>
+
   <!-- End About Section -->
   </div>
   
