@@ -52,7 +52,7 @@ this repo will be used to store the code for the LHNT website.
 1. go to the repo page on GitHub
 2. click on the pull requests tab
 3. click on the green new pull request button
-4. compare the changes and click on the green create pull request button
+4. compare the changes by comparing feature branch (2nd slot) with desired branch (1st slot) and click on the green create pull request button
 5. add a title and description to the pull request
 6. click on the green create pull request button
 
