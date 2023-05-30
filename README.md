@@ -30,14 +30,34 @@ this repo will be used to store the code for the LHNT website.
 1. open terminal
 2. click on the green code button on the repo page
 3. click on the clipboard icon to copy the SSH link
-4. type `git clone ` and paste the link. Press enter
-5. type `cd ` and type the new directory and press enter
+4. type `git clone 'SSH-link'` and press enter
+5. type `cd 'new-directory'` and type the new directory and press enter
+
+## how to change branches for feature development
+
+1. type `git checkout -b 'new-branch-name'` and press enter
+2. make changes to necessary files
 
 ## How to push changes to the repo
 
-1. change to branch you want to push
-2. type `git add .` and press enter
-3. type `git commit -m "message"` and press enter
-4. type `git push origin 'name-of-branch'` and press enter
+1. make changes to your files in feature branch
+2. change to main branch by typing `git checkout main` and press enter
+3. type `git pull` and press enter
+4. change to feature branch by typing `git checkout 'feature-branch'` and press enter
+5. type `git merge main` and press enter
+6. type `git push` and press enter
+
+## How to create a pull request
+
+1. go to the repo page on GitHub
+2. click on the pull requests tab
+3. click on the green new pull request button
+4. compare the changes and click on the green create pull request button
+5. add a title and description to the pull request
+6. click on the green create pull request button
+
+
+
+
 
 
