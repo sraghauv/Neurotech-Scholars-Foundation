@@ -211,19 +211,30 @@ header{
       <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
     </div><br>
-    <p>Let's get in touch. Send me a message:</p>
+    <p>Intereseted? Send us a message:</p>
 
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+    <form id = "contact" action="https://docs.google.com/forms/d/e/1FAIpQLSfQ4hE_kS5lYWUroivOzxLidBgyqFaV_kKK1OZ547NvYEBlZw/formResponse" method="post" target = "_blank" onsubmit="return clearForm()">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="entry.629102593"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="entry.864179738"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Major(s)" required name="entry.953024310"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Why are you interested?" required name="entry.1563692699"></p>
       <p>
         <button class="w3-button w3-light-grey w3-padding-large" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
     </form>
+    
+    <script>
+      function clearForm() {
+        // delay the form clearning to ensure the data gets submitted
+        setTimeout(function(){
+          document.getElementById("contact").reset();
+        }, 500);
+        return true;
+      }
+    </script>
+
   <!-- End Contact Section -->
   </div>
   
