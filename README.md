@@ -17,12 +17,12 @@ this repo will be used to store the code for the LHNT website.
 ## How to create SSH key (for Mac)
 
 1. open terminal
-2. type `ssh-keygen -t ed25519 -C "
+2. type `ssh-keygen -t ed25519 -C "YourEmail@utexas.edu"` and press enter
 3. press enter to save the key in the default location
 4. enter a passphrase (this is optional)
 5. type `eval "$(ssh-agent -s)"` and press enter
-6. type `ssh-add -K ~/.ssh/id_ed25519` and press enter
-7. type `pbcopy < ~/.ssh/id_ed25519.pub` and press enter
+6. type `ssh-add ~/.ssh/id_ed25519` and press enter
+7. type `pbcopy < ~/.ssh/id_ed25519.pub` and press enter; this will automatically copy the key to your computer clipboard
 8. paste the key into the SSH key field on GitHub
 
 ## How to clone the repo
