@@ -12,7 +12,8 @@ this repo will be used to store the code for the LHNT website.
 6. type `eval $(ssh-agent -s)` and press enter
 7. type `ssh-add ~/.ssh/id_ed25519` and press enter
 8. type `clip < ~/.ssh/id_ed25519.pub` and press enter
-9. paste the key into the SSH key field on GitHub
+9. click on the github profile icon, go to settings, and find the SSH keys under Access
+10. paste the key into the SSH key field on GitHub
 
 ## How to create SSH key (for Mac)
 
