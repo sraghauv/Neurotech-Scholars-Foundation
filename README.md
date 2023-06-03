@@ -23,7 +23,8 @@ this repo will be used to store the code for the LHNT website.
 5. type `eval "$(ssh-agent -s)"` and press enter
 6. type `ssh-add ~/.ssh/id_ed25519` and press enter
 7. type `pbcopy < ~/.ssh/id_ed25519.pub` and press enter; this will automatically copy the key to your computer clipboard
-8. paste the key into the SSH key field on GitHub
+8. click on the github profile icon, go to settings, and find the SSH keys under Access
+9. name the key and paste it into the SSH key field on GitHub
 
 ## How to clone the repo
 
