@@ -16,7 +16,7 @@ this repo will be used to store the code for the LHNT website.
 
 ## How to create SSH key (for Mac)
 
-1. open terminal
+1. download and install git for Mac https://git-scm.com/download
 2. type `ssh-keygen -t ed25519 -C "YourEmail@utexas.edu"` and press enter
 3. press enter to save the key in the default location
 4. enter a passphrase (this is optional)
