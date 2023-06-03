@@ -31,7 +31,7 @@ this repo will be used to store the code for the LHNT website.
 1. open terminal
 2. click on the green code button on the repo page
 3. click on the clipboard icon to copy the SSH link
-4. type `git clone 'SSH-link'` and press enter
+4. type `git clone 'SSH-your_link'` and press enter
 5. type `cd 'new-directory'` and type the new directory and press enter
 
 ## how to change branches for feature development
