@@ -2,6 +2,9 @@
 
 this repo will be used to store the code for the LHNT website.
 
+## Note: HTTPS cloning can be used instead of SSH if git-credential-manager is installed 
+1. https://github.com/git-ecosystem/git-credential-manager/blob/main/README.md
+
 ## How to create SSH key (for Windows)
 
 1. download and install Git for Windows: https://git-scm.com/download/win
