@@ -1,92 +1,128 @@
 <!DOCTYPE html>
+<!-- URL: https://lhneurotech.github.io/LHNT/-->
 <html>
+
 <head>
-<title>Longhorn NeuroTech</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222; justify-content: center;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-.back-img{
-    background-image: url("main.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 758px;
-    width: 992px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: none;
-    margin-bottom: none;
-    filter: grayscale(88%) brightness(80%);
-}
-header{
-    padding-top: none;
-}
-</style>
+    <title>Longhorn Neurotech</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
+
+    
+
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .w3-row-padding img {
+            margin-bottom: 12px
+        }
+
+        .w3-sidebar {
+            width: 120px;
+            background: #222;
+            justify-content: center;
+        }
+
+        #main {
+            margin-left: 120px
+        }
+
+        @media only screen and (max-width: 600px) {
+            #main {
+                margin-left: 0
+            }
+        }
+
+        .back-img {
+            background-image: url("main.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding-top: 300px;
+            padding-bottom: 300px;
+            height: 50vh; 
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px; 
+            filter: grayscale(88%) brightness(80%);
+            position: relative; 
+        }
+
+        header {
+            padding-top: none;
+        }
+        
+        h1.w3-jumbo {
+          white-space: pre-line;
+          font-size: 5vw;
+        }
+
+    </style>
 </head>
+
 <body class="w3-black">
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+        <!-- Avatar image in top left corner -->
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
+            <i class="fa fa-home w3-xxlarge"></i>
+            <p>HOME</p>
+        </a>
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
+            <i class="fa fa-user w3-xxlarge"></i>
+            <p>ABOUT</p>
+        </a>
+        <a href="#teams" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
+            <i class="fa fa-users w3-xxlarge"></i>
+            <p>TEAMS</p>
+        </a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
+            <i class="fa fa-envelope w3-xxlarge"></i>
+            <p>CONTACT</p>
+        </a>
+    </nav>
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <!--img src="/w3images/avatar_smoke.jpg" style="width:100%"--->
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <a href="#teams" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
-    <i class="fa fa-users w3-xxlarge"></i>
-    <p>TEAMS</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
-</nav>
-
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-  </div>
-</div>
-
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-center w3-black" id="home">
-    <div class="back-img">
-
-    <h1 class="w3-jumbo"><span class="w3-hide-small">Longhorn</span> NeuroTech</h1>
-    <p>quick description line.</p>
-    <!--img src="main.jpg" alt="picture" class="w3-image" width="992" height="1108"-->
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+            <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+            <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+            <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+        </div>
     </div>
-  </header>
 
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">Longhorn NeuroTech </h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>Some text about us. Some text about us. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
+    <!-- Page Content -->
+    <div class="w3-padding-large" id="main">
+        <!-- Header/Home -->
+        <header class="w3-container w3-center w3-black" id="home">
+            <div class="back-img">
+                <h1 class="w3-jumbo"><span class="w3-hide-small">Longhorn</span> Neurotech</h1>
+                <p>quick description line.</p>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+            <h2 class="w3-text-light-grey">Longhorn Neurotech </h2>
+            <hr style="width:200px" class="w3-opacity">
+            <p>Some text about us. Some text about us. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
     <!--<h3 class="w3-padding-16 w3-text-light-grey">Skills</h3>
     <p class="w3-wide">Python</p>
     <div class="w3-white">
@@ -211,7 +247,7 @@ header{
       <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
     </div><br>
-    <p>Intereseted? Send us a message:</p>
+    <p>Interesested? Send us a message:</p>
 
     <form id = "contact" action="https://docs.google.com/forms/d/e/1FAIpQLSfQ4hE_kS5lYWUroivOzxLidBgyqFaV_kKK1OZ547NvYEBlZw/formResponse" method="post" target = "_blank" onsubmit="return clearForm()">
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="entry.629102593"></p>
@@ -224,6 +260,16 @@ header{
         </button>
       </p>
     </form>
+
+    <script>
+      function clearForm() {
+        setTimeout(function() {
+          document.getElementById("contact").reset();
+        }, 500)
+        
+        return True;
+      }
+    </script>
 
   <!-- End Contact Section -->
   </div>
