@@ -15,18 +15,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 #main {margin-left: 120px; margin-right: auto;}
 /* Remove margins from "page content" on small screens */
-.back-img {
-            background-image: url("main.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            margin: auto;
-            height: 70vh; 
-            width: 70vw;
-            filter: grayscale(88%) brightness(80%);
-            position: relative; 
-            box-shadow: 0px -15px 88px 78px black inset;
-        }
+#main_img{ width: 60vw;}
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 .w3-bar-item{
   margin-top: 7%;
@@ -118,10 +107,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class=" w3-justify" id="main">
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <div class="back-img">
-    <h1 class="w3-jumbo"><span class="w3-hide-small w3-padding-16">Longhorn</span> NeuroTech</h1>
-    <p>We are a neural engineering club dedicated to preparing our members for careers in academia and industry through NeuroTechX competitions, education, and networking.</p>
-  </div>
+    <div class="content">
+      <img src="main.jpg" id="main_img">
+      <p class="w3-large">We are a neural engineering club dedicated to preparing our members for careers in academia and industry through NeuroTechX competitions, education, and networking.</p>
+    </div>
 
   </header>
 
@@ -337,27 +326,25 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <!-- Contact Section -->
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
     <h2 class="w3-text-light-grey">Contact Us</h2>
-    <hr style="width:200px" class="w3-opacity">
+    <hr style="width:170px" class="w3-opacity">
 
     <div class="w3-section">
       <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Austin, TX</p>
       <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
     </div><br>
-    <p>Let's get in touch. Send me a message:</p>
-    <br>
     <div class="QRs">
       <div class="w3-half">
-        <img src="NTX_logo.png", width="35%">
-        <p>
-          Join our Slack
-        </p>
-      </div>
-      <div class="w3-half">
-        <img src="NTX_logo.png" alt="NTX_logo.png", width="35%">
-        <p>
-          Fill out interest form
-        </p>
+        <h2 >
+          Fill out interest form:
+        </h2>
+        <button onclick=" window.open('http://google.com','_blank')" style="width:35vw">
+          <img src="NTX_logo.png" alt="NTX_logo.png", width="35%">
+        </button>
+<br>
+<p>
+  <br> <span style="color:rgba(0,0,0,0);"> .</span>
+</p>
       </div>
 
     </div>
