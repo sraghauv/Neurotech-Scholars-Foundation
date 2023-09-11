@@ -1,198 +1,151 @@
 <!DOCTYPE html>
-<!-- URL: https://lhneurotech.github.io/LHNT/-->
 <html>
-
 <head>
-    <title>Longhorn Neurotech</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
-
-    
-
-    <style>
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: "Montserrat", sans-serif
-        }
-
-        .w3-row-padding img {
-            margin-bottom: 12px
-        }
-
-        .w3-sidebar {
-            width: 120px;
-            background: #222;
-            justify-content: center;
-        }
-
-        #main {
-            margin-left: 120px
-        }
-
-        @media only screen and (max-width: 600px) {
-            #main {
-                margin-left: 0
-            }
-        }
-
-        .back-img {
+<title>Longhorn NeuroTech</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 150px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px; margin-right: auto;}
+/* Remove margins from "page content" on small screens */
+.back-img {
             background-image: url("main.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            padding-top: 300px;
-            padding-bottom: 300px;
-            height: 50vh; 
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 20px; 
+            margin: auto;
+            height: 70vh; 
+            width: 70vw;
             filter: grayscale(88%) brightness(80%);
             position: relative; 
+            box-shadow: 0px -15px 88px 78px black inset;
         }
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+.w3-bar-item{
+  margin-top: 7%;
+}
+.w3-bar-item:first-child{
+  margin-top: none;
+}
+.margin-right{
+  margin-right: 72px;
+}
+.margin-bottom{
+  margin-bottom: 70px;
+}
+.margin-top{
+  margin-top: 50px;
+}
+.logo{
+  position: absolute;
+  left: 12.5%;
+  bottom: 1%;
+  width: 75%;
+}
 
-        header {
-            padding-top: none;
-        }
-        
-        h1.w3-jumbo {
-          white-space: pre-line;
-          font-size: 5vw;
-        }
-        .w3-bar-item{
-          margin-top: 13%;
-        }
-        .logo{
-          position: absolute;
-          left: 1%;
-          bottom: 1%;
-        }
-
-    </style>
+</style>
 </head>
-
 <body class="w3-black">
-    <!-- Icon Bar (Sidebar - hidden on small screens) -->
-    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-        <!-- Avatar image in top left corner -->
-        <img src="NTX_logo.png" style="width:100%">
-        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
-            <i class="fa fa-home w3-xxlarge"></i>
-            <p>HOME</p>
-        </a>
-        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
-            <i class="fa fa-user w3-xxlarge"></i>
-            <p>ABOUT</p>
-        </a>
-        <a href="#teams" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
-            <i class="fa fa-users w3-xxlarge"></i>
-            <p>TEAMS</p>
-        </a>
-        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-greyscale">
-            <i class="fa fa-envelope w3-xxlarge"></i>
-            <p>CONTACT</p>
-        </a>
-        <img class="logo" src = "TEXAS_official_seal.svg" alt="My SVG"/>
-    </nav>
 
-    <!-- Navbar on small screens (Hidden on medium and large screens) -->
-    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-            <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-            <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-            <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
-            <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-        </div>
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="NTX_logo.png" style="width:100%; background-color: rgba(0,0,0,0);">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PAGE</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+  <img class="logo" src = "TEXAS_official_seal.svg" alt="My SVG"/>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PAGE</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large w3-justify w3-padding-64" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <div class="back-img">
+    <h1 class="w3-jumbo"><span class="w3-hide-small w3-padding-16">Longhorn</span> NeuroTech</h1>
+    <p>quick description line.</p>
+  </div>
+
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-light-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey ">Longhorn NeuroTech </h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>Some text about us. Some text about us. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <!--<h3 class="w3-padding-16 w3-text-light-grey">Skills</h3>
+    <p class="w3-wide">Python</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Hardware</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide"> sd</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div><br>
+    
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">11+</span><br>
+        Partners
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">55+</span><br>
+        Projects Done
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">89+</span><br>
+        Happy Clients
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">150+</span><br>
+        Meetings
+      </div>
     </div>
 
-    <!-- Page Content -->
-    <div class="w3-padding-large" id="main">
-        <!-- Header/Home -->
-        <header class="w3-container w3-center w3-black" id="home">
-            <div class="back-img">
-                <h1 class="w3-jumbo"><span class="w3-hide-small">Longhorn</span> Neurotech</h1>
-                <p>quick description line.</p>
-            </div>
-        </header>
-
-        <!-- About Section -->
-        <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-            <h2 class="w3-text-light-grey">Longhorn Neurotech </h2>
-            <hr style="width:200px" class="w3-opacity">
-            <p>Some text about us. Some text about us. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-
-        <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="officers">
-            <h3 class="w3-text-light-grey">Officers</h3>
-
-            <div class="w3-row">
-              <div class="w3-col m6">
-                <img src="/w3images/bandmember.jpg" alt="picture" class="w3-circle w3-margin-right" style="width:80px">
-                <p><span class="w3-large w3-margin-right">President</span></p>
-                <p>Description</p>
-              </div>
-
-              <div class="w3-col m6">
-                  <img src="/w3images/avatar_g2.jpg" alt="picture" class="w3-circle w3-margin-right" style="width:80px">
-                  <p><span class="w3-large w3-margin-right">Captain</span></p>
-                  <p>Description</p>
-              </div>
-            </div>
-
-            <!-- Button to trigger dropdown -->
-            <button class="w3-button w3-black" style="max-width: 50%;" onclick="toggleAdditionalOfficers()">
-              Other Officer Positions <i class="fa fa-caret-down"></i>
-            </button>
-
-            <!-- Hidden container for additional officer positions -->
-            <div id="additionalOfficers" class="w3-row w3-hide">
-              <div class="w3-col m6">
-                <p><span class="w3-large w3-margin-right">VP Public Relations</span></p>
-                <p>Description</p>
-                <p><span class="w3-large w3-margin-right">VP Finance</span></p>
-                <p>Description</p>
-                <p><span class="w3-large w3-margin-right">VP Outreach</span></p>
-                <p>Description</p>
-              </div>
-
-              <div class="w3-col m6">
-                <p><span class="w3-large w3-margin-right">Software Lead</span></p>
-                <p>Description</p>
-                <p><span class="w3-large w3-margin-right">Hardware Lead</span></p>
-                <p>Description</p>
-                <p><span class="w3-large w3-margin-right">R&D Lead</span></p>
-                <p>Description</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Script to toggle visibility -->
-          <script>
-          function toggleAdditionalOfficers() {
-            var x = document.getElementById("additionalOfficers");
-            if (x.className.indexOf("w3-show") == -1) {
-              x.className += " w3-show";
-            } else {
-              x.className = x.className.replace(" w3-show", "");
-            }
-          }
-          </script>
-
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Resume
+    </button>-->
+    
     <!-- Grid for pricing tables -->
-    <h3 class="w3-padding-16 w3-text-light-grey" id="teams">Teams</h3>
-    <div class="w3-row-padding" style="margin:0 -16px" >
+    <h3 class="w3-padding-16 w3-text-light-grey">Teams</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-half w3-margin-bottom">
         <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
           <li class="w3-dark-grey w3-xlarge w3-padding-32">Hardware</li>
@@ -229,28 +182,64 @@
     <!-- End Grid/Pricing tables -->
     </div>
     
+    <!-- Testimonials -->
+    <div class=".w3-white">
+      <h2 class="margin-top"> Executive Officers</h2>  
+      <hr style="width:200px" class="w3-opacity">
+      <img src="pfp.png" alt="picture" class="w3-left w3-circle" style="width:150px">
+      <div style=" margin-top: 5%; margin-left: 18%;">
+        <p ><span class="w3-large margin-top"> President:</span> </p>
+        <p > description</p>
+      </div>
+
+      <div class="margin-bottom"><br></div>
+      <img src="pfp.png" alt="picture" class="w3-left w3-circle" style="width:150px">
+      <div style=" margin-top: 10%; margin-left: 18%;">
+        <p ><span class="w3-large margin-top"> Captain: </span> </p>
+        <p > description</p>
+      </div>
+
+  
+
+    </div>
 
   <!-- End About Section -->
   </div>
   
   <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">Page</h2>
+  <div class=" w3-content" id="photos">
+    <h2 class="margin-top">Leadership Team</h2>
     <hr style="width:200px" class="w3-opacity">
 
     <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-row-padding" style="margin:0 ">
       <div class="w3-half">
-        <img src="/w3images/wedding.jpg" style="width:100%">
-        <img src="/w3images/rocks.jpg" style="width:100%">
-        <img src="/w3images/sailboat.jpg" style="width:100%">
+        <img src="pfp.png" alt="picture" class="w3-left w3-circle margin-right" style="width:120px">
+        <p><span class="w3-large margin-bottom"> Title 1</span> </p>
+        <p class="margin-bottom"> description</p>
+
+        <img src="pfp.png" alt="picture" class="w3-left w3-circle margin-right" style="width:120px">
+        <p><span class="w3-large margin-bottom"> Title 2</span> </p>
+        <p class="margin-bottom"> description</p>
+
+        <img src="pfp.png" alt="picture" class="w3-left w3-circle margin-right" style="width:120px">
+        <p><span class="w3-large"> Title 3</span> </p>
+        <p class="margin-bottom"> description</p>
+
       </div>
 
       <div class="w3-half">
-        <img src="/w3images/underwater.jpg" style="width:100%">
-        <img src="/w3images/chef.jpg" style="width:100%">
-        <img src="/w3images/wedding.jpg" style="width:100%">
-        <img src="/w3images/p6.jpg" style="width:100%">
+        <img src="pfp.png" alt="picture" class="w3-left w3-circle margin-right" style="width:120px">
+        <p><span class="w3-large margin-bottom"> Title 1</span> </p>
+        <p class="margin-bottom"> description</p>
+
+        <img src="pfp.png" alt="picture" class="w3-left w3-circle margin-right" style="width:120px">
+        <p><span class="w3-large margin-bottom"> Title 2</span> </p>
+        <p class="margin-bottom"> description</p>
+
+        <img src="pfp.png" alt="picture" class="w3-left w3-circle margin-right" style="width:120px">
+        <p><span class="w3-large"> Title 3</span> </p>
+        <p class="margin-bottom"> description</p>
       </div>
     <!-- End photo grid -->
     </div>
@@ -267,35 +256,31 @@
       <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
     </div><br>
-    <p>Interested? Send us a message:</p>
+    <p>Let's get in touch. Send me a message:</p>
+    <br>
+    <div class="QRs">
+      <div class="w3-half">
+        <img src="NTX_logo.png", width="35%">
+        <p>
+          Join our Slack
+        </p>
+      </div>
+      <div class="w3-half">
+        <img src="NTX_logo.png" alt="NTX_logo.png", width="35%">
+        <p>
+          Fill out interest form
+        </p>
+      </div>
 
-    <form id = "contact" action="https://docs.google.com/forms/d/e/1FAIpQLSfQ4hE_kS5lYWUroivOzxLidBgyqFaV_kKK1OZ547NvYEBlZw/formResponse" method="post" target = "_blank" onsubmit="return clearForm()">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="entry.629102593"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="entry.864179738"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Major(s)" required name="entry.953024310"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Why are you interested?" required name="entry.1563692699"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
+    </div>
 
-    <script>
-      function clearForm() {
-        setTimeout(function() {
-          document.getElementById("contact").reset();
-        }, 500)
-        
-        return True;
-      }
-    </script>
 
   <!-- End Contact Section -->
   </div>
   
+ 
     <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+  <!--<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
     <p class="w3-medium">Socials</p>
     
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -305,8 +290,8 @@
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   <!-- End footer -->
-  </footer>
-
+  <!--</footer>-->
+  
 <!-- END PAGE CONTENT -->
 </div>
 
