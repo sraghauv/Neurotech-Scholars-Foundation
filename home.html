@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Longhorn NeuroTech</title>
+<link rel="icon" href="NTX_logo.png" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.col{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+}
+.wide{
+  letter-spacing:4px
+}
+.button{
+  border:none;
+  background-color: aliceblue;
+  display:inline-block;
+  padding:8px 16px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap;
+  border-radius: 5px;
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12vh;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+}
+.display-container{
+    background-image: url('brain.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -60vh ;
+    border: 2px solid black;
+    width: 100vw;
+    height: 80vh;
+    margin-top: 12vh;
+}
+.main-img{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-10vh) scaleX(-1);
+    width: 85%; 
+    height: 140%;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+
+.main-container{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    transform: translateZ(-10)
+}
+.text{
+    font-size: 16px;
+    line-height: 1.8em;
+}
+.button:hover{
+  background-color: #95a8c1;
+}
+.logo{
+  border:none;
+  display:inline-block;
+  padding:8px 16px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  background-color:inherit;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap
+}
+footer [class ^= 'footer-'] {
+    width: 33.3333%;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 1%;
+}
+footer .footer-left {
+    float: left;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 24px;
+}
+
+footer .footer-right {
+    float: right;
+    margin: none;
+    transform: translateY(-30%);
+}
+.end{
+  background-color: black;
+  color: white;
+  width: 100vw;
+  position: absolute;
+}
+
+
+@keyframes Fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animated-element {
+  animation: Fade 2s ease-in-out; /* Use your animation name, duration, and timing function */
+}
+.animated-element2 {
+  animation: Fade 4s ease-in-out; /* Use your animation name, duration, and timing function */
+}
+.xxlarge{
+  font-size: 80px;
+}
+.top{
+  top: 0;
+}
+.option1 ul, .option2 ul {
+  display: none; /* Hide the default list */
+  flex-direction: column; /* Display dropdown items vertically */
+  position: absolute;
+  background-color: #fff; /* Background color for dropdown */
+  border: 1px solid #ccc; /* Border for dropdown */
+  z-index: 1;
+  text-decoration: none;
+}
+.option1 ul li, .option2 ul li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.option1:hover ul, .option2:hover ul {
+  display: flex; /* Display the dropdown when hovering over the option */
+  list-style-type: none;
+}
+.dropbtn {
+  background-color:white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    /* Remove the 'right' property */
+    right: auto;
+  /* Add the following properties */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #95a8c1;}
+.option1{
+  opacity: 1;
+}
+.option2{
+  opacity: 0;
+}
+@media (max-width: 885px){
+  .option1{
+    opacity: 0;
+  }
+  .option2{
+    opacity: 1;
+    margin-right: 45vw;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="top">
+  <div class="bar w3-white wide card">
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right option1">
+      <a href="home.html" class="logo">
+        <img src="main.jpg" alt="Logo" style="width: 170px;">
+      </a>
+      <a href="home.html" class="w3-bar-item button">Home</a>
+      <a href="about.html" class="w3-bar-item button">About Us</a>
+      <!--<a href="#contact" class="w3-bar-item button">Projects</a>-->
+      <a href="events.html" class="w3-bar-item button">Events</a>
+      <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Join Us</a>
+      <a href="#contact" class="w3-bar-item button">Member Login</a>
+    </div>
+    <div class="option2">
+      <div class="dropdown">
+        <button class="dropbtn"><span class="w3-xlarge">&#9776;</span></button>
+        <div class="dropdown-content">
+          <a href="home.html" class="w3-bar-item button">Home</a>
+          <a href="about.html" class="w3-bar-item button">About Us</a>
+          <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Join Us</a>
+          <a href="events.html" class="w3-bar-item button">Events</a>      
+          <a href="#contact" class="w3-bar-item button">Member Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content wide" style="max-width:1500px;">
+    <div class="main-container">
+    <img class="main-img" src="brain.gif" draggable="false">
+    <div class="w3-display-middle w3-margin-top w3-center">
+      <h1 class="xxlarge w3-text-white"><b class="animated-element">Longhorn </b> <span class="w3-hide-small w3-text-light-grey animated-element2">NeuroTech</span></h1>
+
+    </div>
+
+    </div>
+</header>
+  <!--
+<header class="w3-display-container  w3-wide"  id="home">
+    <div class="main-container">
+        <div class=" w3-margin-top w3-center">
+            <h1 class="w3-xxlarge"><span class="w3-padding w3-black w3-opacity-min"><b>Longhorn</b></span> <span class="w3-hide-small ">NeuroTech</span></h1>
+          </div>
+        <img src="brain.gif" class="main-img" draggable="false">
+    </div>
+
+</header>-->
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+
+  <div class="w3-row-padding col">
+    <div class="w3-col l3 m6 w3-margin-bottom" >
+        <a href="https://www.example.com">
+            <img src="NTX_logo.png" alt="Mike" style="width:100%">
+        </a> 
+      <p><button class="w3-button w3-light-grey w3-block">Projects</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <a href="https://www.example.com">
+            <img src="NTX_logo.png" alt="Mike" style="width:100%">
+        </a> 
+      <p><button class="w3-button w3-light-grey w3-block">Join us</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <a href="https://www.example.com">
+            <img src="NTX_logo.png" alt="Mike" style="width:100%">
+        </a>          
+      <p><button class="w3-button w3-light-grey w3-block">Upcoming Events</button></p>
+    </div>
+  </div>
+
+<!-- Image of location/map 
+<div class="w3-container">
+  <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+</div> -->
+
+
+<!-- End page content -->
+</div>
+
+
+
+<footer class="end">
+  <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center">Contact</h2><br>
+
+  <aside class="footer-left w3-hover-opacity">
+    <i class="fa fa-envelope w3-xlarge "></i>
+    <a href="mailto:lhneurotech@gmail.com">
+    lhneurotech@gmail.com</a>
+  </aside>
+
+  <aside class="footer-right">
+    <a href="https://linktr.ee/lhneurotech">
+    <img src="linktree-logo-icon.svg" class="w3-hover-opacity" width="5%">      
+    </a>
+  </aside>
+
+  <aside class="footer-center">
+    <i class="fa fa-linkedin fa-2x w3-hover-opacity "></i>  
+  </aside>
+</footer>
+
+
+</body>
+</html>
