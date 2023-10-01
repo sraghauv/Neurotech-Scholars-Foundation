@@ -2,394 +2,328 @@
 <html>
 <head>
 <title>Longhorn NeuroTech</title>
+<link rel="icon" href="NTX_logo.png" type="image/x-icon">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 150px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px; margin-right: auto;}
-/* Remove margins from "page content" on small screens */
-#main_img{ width: 60vw;}
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-.w3-bar-item{
-  margin-top: 7%;
+.col{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
 }
-.content{
-  width: 75vw;
-  margin-left:auto;
-  margin-right: 5vw;
+.wide{
+  letter-spacing:4px
 }
-.w3-bar-item:first-child{
-  margin-top: none;
+.button{
+  border:none;
+  background-color: aliceblue;
+  display:inline-block;
+  padding:8px 16px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap;
+  border-radius: 5px;
 }
-.margin-right{
-  margin-right: 27px;
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12vh;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
 }
-.margin-left{
-  margin-left: 30px;
+.display-container{
+    background-image: url('brain.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -60vh ;
+    border: 2px solid black;
+    width: 100vw;
+    height: 80vh;
+    margin-top: 12vh;
 }
-.margin-left2{
-  margin-left: 40px;
+.main-img{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-10vh) scaleX(-1);
+    width: 85%; 
+    height: 140%;
+    overflow: hidden;
+    aspect-ratio: 1/1;
 }
-.margin-bottom{
-  margin-bottom: 30%;
+
+.main-container{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    transform: translateZ(-10)
 }
-.margin-bottom2{
-  margin-bottom: 15%;
+.text{
+    font-size: 16px;
+    line-height: 1.8em;
 }
-.margin-top{
-  margin-top: 30px;
+.button:hover{
+  background-color: #95a8c1;
 }
 .logo{
-  left: 12.5%;
-  margin-top: 5%;
-  width: 75%;
+  border:none;
+  display:inline-block;
+  padding:8px 16px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  background-color:inherit;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap
 }
-.pfp-circle{
-  width: 140px;
-  height: 140px;
+footer [class ^= 'footer-'] {
+    width: 33.3333%;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 1%;
+}
+footer .footer-left {
+    float: left;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 24px;
+}
+
+footer .footer-right {
+    float: right;
+    margin: none;
+    transform: translateY(-30%);
+}
+.end{
+  background-color: black;
+  color: white;
+  width: 100vw;
+  position: absolute;
+}
+
+
+@keyframes Fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animated-element {
+  animation: Fade 2s ease-in-out; /* Use your animation name, duration, and timing function */
+}
+.animated-element2 {
+  animation: Fade 4s ease-in-out; /* Use your animation name, duration, and timing function */
+}
+.xxlarge{
+  font-size: 80px;
+}
+.top{
+  top: 0;
+}
+.option1 ul, .option2 ul {
+  display: none; /* Hide the default list */
+  flex-direction: column; /* Display dropdown items vertically */
+  position: absolute;
+  background-color: #fff; /* Background color for dropdown */
+  border: 1px solid #ccc; /* Border for dropdown */
+  z-index: 1;
+  text-decoration: none;
+}
+.option1 ul li, .option2 ul li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.option1:hover ul, .option2:hover ul {
+  display: flex; /* Display the dropdown when hovering over the option */
+  list-style-type: none;
+}
+.dropbtn {
+  background-color:white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
   position: relative;
-  overflow: hidden;
-  border-radius: 50%;
+  display: inline-block;
 }
-.half{
-  float: left;
-  margin-left: 25%;
-  height: 20%;
-  width: 48.9%;
-  overflow: hidden;
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    /* Remove the 'right' property */
+    right: auto;
+  /* Add the following properties */
+  left: 50%;
+  transform: translateX(-50%);
 }
-.pfp{
-  display: inline;
-  margin: 0 auto;
-  width: 100%;
-  height: auto;
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #95a8c1;}
+.option1{
+  opacity: 1;
+}
+.option2{
+  opacity: 0;
+}
+@media (max-width: 885px){
+  .option1{
+    opacity: 0;
+  }
+  .option2{
+    opacity: 1;
+    margin-right: 45vw;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 </style>
+
 </head>
-<body class="w3-black">
+<body>
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <img src="NTX_logo.png" style="width:100%;">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-info-circle w3-xxlarge"></i>
-    <p>ABOUT US</p>
-  </a>
-  <a href="#officers" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-users w3-xxlarge"></i>
-    <p>OFFICERS</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
-  <img class="logo" src = "TEXAS_official_seal.svg" alt="My SVG"/>
-
-</nav>
-
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PAGE</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+<!-- Navbar (sit on top) -->
+<div class="top">
+  <div class="bar w3-white wide card">
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right option1">
+      <a href="home.html" class="logo">
+        <img src="main.jpg" alt="Logo" style="width: 170px;">
+      </a>
+      <a href="home.html" class="w3-bar-item button">Home</a>
+      <a href="about.html" class="w3-bar-item button">About Us</a>
+      <!--<a href="#contact" class="w3-bar-item button">Projects</a>-->
+      <a href="events.html" class="w3-bar-item button">Events</a>
+      <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Join Us</a>
+      <a href="#contact" class="w3-bar-item button">Member Login</a>
+    </div>
+    <div class="option2">
+      <div class="dropdown">
+        <button class="dropbtn"><span class="w3-xlarge">&#9776;</span></button>
+        <div class="dropdown-content">
+          <a href="home.html" class="w3-bar-item button">Home</a>
+          <a href="about.html" class="w3-bar-item button">About Us</a>
+          <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Join Us</a>
+          <a href="events.html" class="w3-bar-item button">Events</a>      
+          <a href="#contact" class="w3-bar-item button">Member Login</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- Page Content -->
-<div class=" w3-justify" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <div class="content">
-      <img src="main.jpg" id="main_img">
-      <p class="w3-large">We are a neural engineering club dedicated to preparing our members for careers in academia and industry through NeuroTechX competitions, education, and networking.</p>
-    </div>
-
-  </header>
-
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-light-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey ">Longhorn NeuroTech </h2>
-    <hr style="width:317px" class="w3-opacity">
-    <p>Welcome to Longhorn Neurotech, a student organization with a singular focus: facilitating your entry into the world of neural engineering. Our purpose is to provide you with the knowledge, experiences, and connections necessary for a successful career in academia or industry.
-    </p>
-    <p>
-      Through active participation in the NeuroTechX (NTX) international undergraduate student competition, we offer a platform for you to sharpen your skills and collaborate with like-minded peers. This competition not only hones your abilities but also cultivates a sense of teamwork that is invaluable in the field.
-    </p>
-    <p>
-      In addition to competition, we take education seriously. Our club is dedicated to creating and curating educational content that ensures a deep understanding of neural engineering concepts. We believe that a strong foundation is crucial for your growth in this complex field.
-    </p>
-      Furthermore, we understand the significance of networking. Longhorn Neurotech provides opportunities to connect with guest speakers who are established professionals in neural engineering. Conferences and events organized by our club offer a chance to broaden your perspectives and create connections that may shape your future.
-      <p>
-      </p>
-      In essence, Longhorn Neurotech is your stepping stone into the neural engineering domain. We invite you to join us in this journey of learning, collaborating, and networking, as we equip you with the tools to thrive in the exciting realm of neural engineering. 
-    </p>
-    <!--<h3 class="w3-padding-16 w3-text-light-grey">Skills</h3>
-    <p class="w3-wide">Python</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
-    </div>
-    <p class="w3-wide">Hardware</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
-    </div>
-    <p class="w3-wide"> sd</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-    </div><br>
-    
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">11+</span><br>
-        Partners
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">55+</span><br>
-        Projects Done
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">89+</span><br>
-        Happy Clients
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">150+</span><br>
-        Meetings
-      </div>
-    </div>
-
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Download Resume
-    </button>-->
-    
-    <!-- Grid for pricing tables -->
-    <h3 class="w3-padding-16 w3-text-light-grey">Teams</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Hardware</li>
-          <li class="w3-padding-16">EEG</li>
-          <li class="w3-padding-16">Prosthetic Arm</li>
-          <li class="w3-padding-16">  <span style="color:rgba(0,0,0,0)">.</span> </li>
-          <li class="w3-padding-16">
-            <h2>Alan Fletcher</h2>
-            <span class="w3-opacity">Hardware Lead</span>
-          </li>
-          <!--
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Contact</button>
-          </li>
-          -->
-
-        </ul>
-      </div>
-
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Software</li>
-          <li class="w3-padding-16">Machine Learning</li>
-          <li class="w3-padding-16">Signal Processing</li>
-          <li class="w3-padding-16">Hardware Integration</li>
-          <li class="w3-padding-16">
-            <h2>Nathan Feldt</h2>
-            <span class="w3-opacity">Software Lead</span>
-          </li>
-          <!--
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Contact</button>
-          </li>
-          -->
-        </ul>
-      </div>
-      <br>
-      <div class="half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off" style="margin-left: 0;">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">R&D</li>
-          <li class="w3-padding-16">Market Research</li>
-          <li class="w3-padding-16">Neurotech Education</li>
-          <li class="w3-padding-16"><span style="color:rgba(0,0,0,0)">.</span></li>
-          <li class="w3-padding-16">
-            <h2>Josh Bledsoe</h2>
-            <span class="w3-opacity">R&D Lead</span>
-          </li>
-          <!--
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Contact</button>
-          </li>
-          -->
-        </ul>
-      </div>
-
-    <!-- End Grid/Pricing tables -->
-    </div>
-    
-    <!-- Testimonials -->
-    <div class=".w3-white" id="officers">
-      <div style="margin-right: -1vw;">
-        <div class="margin-top"><br></div>
-        <h2 class="margin-top"> Executive Officers</h2>  
-        <hr style="width:270px; margin-bottom: 40px;" class="w3-opacity">
-        <div class = "pfp-circle margin-right w3-left" style="width:180px; height: 180px;">
-          <img src="Taima Crean.jpg" alt="picture" class="pfp" style="height: 220px;width: 220px; transform: translate3d(-15px,-15px,0);">        
-        </div>
-        <div style=" margin-top: 0%; margin-left: 20%;">
-          <p ><span class="w3-large margin-top"> President:</span> </p>
-          <p ><span class="w3-large margin-top">  Taima Crean</span> </p>
-          <p > Taima Crean is the President and Co-Founder of Longhorn Neurotech. She is a Junior studying Biomedical Engineering with a focus in computation and double minors in Business and Computer Science. In her work she uses deep learning to optimize radiation treatment for lung cancer patients. She has a passion for innovation and hopes to one day work on machine learning applications in healthcare. </p>
-        </div>
-  
-        <div style="margin-bottom: 5%;"><br></div>
-        <div class = "pfp-circle margin-right w3-left" style="width:180px; height: 180px;">
-          <img src="holland1.jpg" alt="picture" class=" pfp w3-left" style="width:300px; transform: translate3d(-63px,-75px,0);">      
-        </div>
-        <div style=" margin-top: -1%; margin-left: 20%;">
-          <p ><span class="w3-large margin-top"> Captain:</span> </p>
-          <p ><span class="w3-large margin-top"> Holland Ernst </span> </p>
-          <p > Holland Ernst is the Captain and Co-Founder of Longhorn Neurotech, and he is a third-year biomedical engineering undergraduate planning to pursue a Master's BME with a specification in neural engineering. His mission is to bridge the gap between the brain and the vast world around us. Being part of Longhorn Neurotech and collaborating with such remarkably talented and diverse individuals not only excites him but also drives him forward in the pursuit of a career in neural engineering and BCI.</p>
-        </div>
-      </div>
-
-
-  
+<!-- Header -->
+<header class="w3-display-container w3-content wide" style="max-width:1500px;">
+    <div class="main-container">
+    <img class="main-img" src="brain.gif" draggable="false">
+    <div class="w3-display-middle w3-margin-top w3-center">
+      <h1 class="xxlarge w3-text-white"><b class="animated-element">Longhorn </b> <span class="w3-hide-small w3-text-light-grey animated-element2">NeuroTech</span></h1>
 
     </div>
 
-  <!-- End About Section -->
-  </div>
-  
-  <!-- Portfolio Section -->
-  <div class=" content" >
-    <h2 class="margin-top">Leadership Team</h2>
-    <hr style="width:255px" class="w3-opacity">
-
-    <!-- Grid for photos -->
-    <div class="w3-row-padding" >
-      <div class="w3-half" style="width:35vw;">
-        <div class = "pfp-circle margin-right w3-left">
-          <img src="Ella_Nyenhuis.jpeg" alt="picture" class="w3-left pfp margin-right" style="transform: translate3d(0px,-10px,0)"">
-        </div>
-        <p><span class="w3-large margin-bottom"> VP of Outreach:</span> </p>
-        <p><span class="w3-large margin-bottom">  Ella Nyenhuis</span> </p>
-        <p class="margin-bottom2"> As a senior studying biomedical engineering, my role as VP of Outreach at Longhorn Neurotech allows me to explore my passion for the intersection of engineering and neuroscience. Outside of my academic pursuits, I find joy in swimming, baking, and immersing myself in a good book at a cozy coffee shop. </p>
-
-        <div class = "pfp-circle margin-right w3-left">
-          <img src="Punit_Desai.jpg" alt="picture" class="pfp">
-        </div>
-        <p><span class="w3-large margin-bottom"> VP of Public Relations: </span> </p>
-        <p><span class="w3-large margin-bottom"> Punit Desai</span> </p>
-        <p class="margin-bottom2"> Punit is a fourth year Pre-Med Biomedical Engineering student with a minor in computer science interested in applying machine learning and artificatial intelligence to medical techonologies. He is a part of the Brazilian Jiu-Jitsu club at UT, and enjoys working out and playing sports outside of class.</p>
-
-        <div class = "pfp-circle margin-right w3-left">
-          <img src="pfp.png" alt="picture" class="w3-left pfp margin-right" >
-        </div>
-        <p><span class="w3-large"> VP of Finance</span> </p>
-        <p><span class="w3-large"> TBD</span> </p>
-        <p class="margin-bottom2"> description</p>
-
-        <div class = "pfp-circle margin-right w3-left">
-          <img src="Ethan Chow.jpg" alt="picture" class="pfp" style="transform: translate3d(0px,-10px,0)">
-        </div>
-        <p><span class="w3-large"> Signal Processing Specialist</span> </p>
-        <p><span class="w3-large"> Ethan Chow</span> </p>
-        <p class="margin-bottom2"> Ethan Chow is a 4th year biomedical engineering student. He is interested in computational mutagenesis, simulating intrinsically disordered proteins, and protein NMR. In his free time Ethan enjoys rock climbing, playing chess, and coding personal apps to streamline his life.</p>
-
-
-      </div>
-
-      <div class="w3-half">
-        <div class="margin-left2" style="width:35vw;">
-
-        <div class = "pfp-circle margin-right w3-left" >
-          <img src="Alan Fletcher.jpg" alt="picture" class="w3-left pfp margin-right" style="transform: translate3d(0px,-40px,0)">
-        </div>
-        <p><span class="w3-large margin-bottom"> Hardware Lead:</span> </p>
-        <p><span class="w3-large margin-bottom">Alan Fletcher  </span> </p>
-        <p class="margin-bottom2"> I am a 4th year BME and member of the Longhorn Band. My prospective career is in clinical prosthetics/orthotics and I am currently doing research in Dr. Fey's Systems for Augmenting Human Mechanics Lab. </p>
-
-        <div class = "pfp-circle margin-right w3-left">
-          <img src="Nathan_Feldt.JPG" alt="picture" class="w3-left pfp margin-right" style="transform: translate3d(0px,-10px,0)">
-        </div>
-        <p><span class="w3-large margin-bottom"> Software Lead:</span> </p>
-        <p><span class="w3-large margin-bottom"> Nathan Feldt</span> </p>
-        <p class="margin-bottom2"> I am a Junior Neuroscience and Math double Major. I am originally from Seattle but Austin is my second home. I love to Golf, watch Texas Football, and do all things Neuroscience. </p>
-
-        <div class = "pfp-circle margin-right w3-left">
-          <img src="Joshua T Bledsoe.jpeg" alt="picture" class=" pfp " style="transform: translate3d(0px,-20px,0)" >
-        </div>
-        <p><span class="w3-large"> R&D Lead</span> </p>
-        <p><span class="w3-large"> Josh Bledsoe</span> </p>
-        <p class="margin-bottom2"> Hey! My name is Josh, and I’m a senior biomedical engineer. I thoroughly enjoy challenges, which is why I am so excited to study the brain! I am aiming to earn my PhD after graduation in Neuroengineering and begin working on developing devices that interact with the brain. Outside of that, I enjoy 3D modeling, reading whatever I can get my hands on, and leading a small group at my church.</p>
-      </div>
-
-      <div class = "pfp-circle margin-right w3-left">
-        <img src="Vivek-Beeram.jpg" alt="picture" class="w3-left pfp margin-right">
-      </div>
-      <p><span class="w3-large"> Machine Learning Specialist</span> </p>
-      <p><span class="w3-large"> Vivek Beeram</span> </p>
-      <p class="margin-bottom2"> My name is Vivek. I'm a junior neuroscience/Plan II student interested in neural evolution and neural network architecture. I'm excited to start building with this team and taking on cutting-edge BCI challenges. I enjoy climbing, exploring nature, and playing chess.</p>
-
-
-      </div>
-    <!-- End photo grid -->
     </div>
-  <!-- End Portfolio Section -->
+</header>
+  <!--
+<header class="w3-display-container  w3-wide"  id="home">
+    <div class="main-container">
+        <div class=" w3-margin-top w3-center">
+            <h1 class="w3-xxlarge"><span class="w3-padding w3-black w3-opacity-min"><b>Longhorn</b></span> <span class="w3-hide-small ">NeuroTech</span></h1>
+          </div>
+        <img src="brain.gif" class="main-img" draggable="false">
+    </div>
+
+</header>-->
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+
+  <div class="w3-row-padding col">
+    <div class="w3-col l3 m6 w3-margin-bottom" >
+        <a href="https://www.example.com">
+            <img src="NTX_logo.png" alt="Mike" style="width:100%">
+        </a> 
+      <p><button class="w3-button w3-light-grey w3-block">Projects</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <a href="https://www.example.com">
+            <img src="NTX_logo.png" alt="Mike" style="width:100%">
+        </a> 
+      <p><button class="w3-button w3-light-grey w3-block">Join us</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+        <a href="https://www.example.com">
+            <img src="NTX_logo.png" alt="Mike" style="width:100%">
+        </a>          
+      <p><button class="w3-button w3-light-grey w3-block">Upcoming Events</button></p>
+    </div>
   </div>
 
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h1 class="w3-text-light-grey">Contact Us</h1>
-    <hr style="width:170px" class="w3-opacity">
-
-    <h2 class=""><i class="fa fa-envelope w3-xxlarge"></i>
-       lhneurotech@gmail.com</h2>
-    <div class="QRs">
-      <div class="w3-half">
-        <br>
-        <h3 class="w3-text-light-grey" >
-          Fill out interest form:
-        </h3>
-        <button class="w3-hover-amber" onclick=" window.open('https://docs.google.com/forms/d/e/1FAIpQLSePJC91QYI-RqhfzwpidxNln_Y6fWuGQmI34KJCOcne6ntPag/viewform?usp=sf_link','_blank')" style="width:10vw; border-radius: 20%;">Interest Form
-        </button>
-<br>
-<p>
-  <br> <span style="color:rgba(0,0,0,0);"> .</span>
-</p>
-      </div>
-
-    </div>
+<!-- Image of location/map 
+<div class="w3-container">
+  <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+</div> -->
 
 
-  <!-- End Contact Section -->
-  </div>
-  
-    <!-- Footer -->
-  <!--<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <p class="w3-medium">Socials</p>
-    
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <!-- End footer -->
-  <!--</footer>-->
-
-<!-- END PAGE CONTENT -->
+<!-- End page content -->
 </div>
+
+
+
+<footer class="end">
+  <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center">Contact</h2><br>
+
+  <aside class="footer-left w3-hover-opacity">
+    <i class="fa fa-envelope w3-xlarge "></i>
+    <a href="mailto:lhneurotech@gmail.com">
+    lhneurotech@gmail.com</a>
+  </aside>
+
+  <aside class="footer-right">
+    <a href="https://linktr.ee/lhneurotech">
+    <img src="linktree-logo-icon.svg" class="w3-hover-opacity" width="5%">      
+    </a>
+  </aside>
+
+  <aside class="footer-center">
+    <i class="fa fa-linkedin fa-2x w3-hover-opacity "></i>  
+  </aside>
+</footer>
+
+
 </body>
 </html>
-
