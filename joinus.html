@@ -5,7 +5,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="icon" href="main_logo.jpg" type="image/x-icon">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
@@ -30,11 +29,8 @@
   white-space:nowrap;
   border-radius: 5px;
 }
-.wide{
-  letter-spacing:4px
-}
 .top-card{
-  display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 12vh;
@@ -221,11 +217,25 @@ h1 {
   min-height: 35vh;
   position: relative; /* Make it a positioning context */
   margin-top: 2%;
-  display: flex;
   justify-content: center;
-  text-align: center;
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center; 
 }
-
+.event-container > *{
+    padding: 10px;
+  flex: 1 100%;
+}
+@media all and (min-width: 600px) {
+  .calendar-icon { flex: 1 0 0; }
+}
+@media all and (min-width: 800px) {
+  .event-details    { flex: 3 0px; }
+  .calendar-icon { order: 1; } 
+  .event-details    { order: 2; }
+  .event-location  { order: 4; }
+}
 /* Calendar Icon Styles */
 .calendar-icon {
   position: absolute; /* Position it relative to the event container */
@@ -239,7 +249,6 @@ h1 {
 }
 
 .event-day {
-  font-size: 26px; /* Adjust the font size for the date */
   position: absolute; /* Position the date number within the icon */
   top: 70%; /* Vertically center the date number */
   left: 50%; /* Horizontally center the date number */
@@ -260,110 +269,65 @@ h1 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-  position: absolute;
   top: 4%;
 }
 .event-details {
   font-size: 16px;
   margin-bottom: 10px;
   max-width: 55vw;
-  position: relative;
   margin-top: 5%;  
 }
 .event-location {
   font-size: 16px;
   margin-bottom: 4%;
-  position: absolute;
   margin-top: 2%;
 }
 
 .event-time {
   font-size: 14px;
 }
-.top{
-  top: 0;
-}
-.option1 ul, .option2 ul {
-  display: none; /* Hide the default list */
-  flex-direction: column; /* Display dropdown items vertically */
-  position: absolute;
-  background-color: #fff; /* Background color for dropdown */
-  border: 1px solid #ccc; /* Border for dropdown */
-  z-index: 1;
-  text-decoration: none;
-}
-.option1 ul li, .option2 ul li {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-.option1:hover ul, .option2:hover ul {
-  display: flex; /* Display the dropdown when hovering over the option */
-  list-style-type: none;
-}
-.dropbtn {
-  background-color:white;
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+.wrapper {
+
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-    /* Remove the 'right' property */
-    right: auto;
-  /* Add the following properties */
-  left: 50%;
-  transform: translateX(-50%);
+.header {
+  background: tomato;
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
+.footer {
+  background: lightgreen;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.main {
+  text-align: left;
+  background: deepskyblue;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.aside-1 {
+  background: gold;
+}
 
-.dropdown:hover .dropbtn {background-color: #95a8c1;}
-.option1{
-  opacity: 1;
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 0 0; }
 }
-.option2{
-  opacity: 0;
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 2; } 
+  .main    { order: 3; }
+  .footer  { order: 1; }
 }
-@media (max-width: 885px){
-  .option1{
-    opacity: 0;
-  }
-  .option2{
-    opacity: 1;
-    margin-right: 45vw;
-    display: flex;
-    justify-content: center;
-  }
+
+body {
+  padding: 2em; 
 }
-#linklogo{
-  padding-top: none;
-  margin-top: none;
-  transform: translateY(-8px);
-  background-color: white;
-}
+
 
 
 </style>
@@ -371,33 +335,19 @@ h1 {
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="top">
-  <div class="bar w3-white wide top-card">
+<div class="w3-top">
+  <div class="bar w3-white w3-wide top-card">
     <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right option1">
-      <a href="home.html" class="logo">
-        <img src="main.jpg" alt="Logo" style="width: 170px;">
-      </a>
+    <div class="w3-right">
+        <a href="home.html" class="logo">
+            <img src="main.jpg" alt="Logo" style="width: 170px;">
+          </a>
       <a href="home.html" class="w3-bar-item button">Home</a>
       <a href="about.html" class="w3-bar-item button">About Us</a>
       <!--<a href="#contact" class="w3-bar-item button">Projects</a>-->
-      <a href="events.html" class="w3-bar-item button">Events</a>
+      <a href="#contact" class="w3-bar-item button">Events</a>
       <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Join Us</a>
-      <a href="resources.html" class="w3-bar-item button">Resources</a>
-      <a href="login.html" class="w3-bar-item button">Member Login</a>
-    </div>
-    <div class="option2">
-      <div class="dropdown">
-        <button class="dropbtn"><span class="w3-xlarge">&#9776;</span></button>
-        <div class="dropdown-content">
-          <a href="home.html" class="w3-bar-item button">Home</a>
-          <a href="about.html" class="w3-bar-item button">About Us</a>
-          <a href="events.html" class="w3-bar-item button">Events</a>      
-          <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Join Us</a>
-          <a href="resources.html" class="w3-bar-item button">Resources</a>
-          <a href="login.html" class="w3-bar-item button">Member Login</a>
-        </div>
-      </div>
+      <a href="#contact" class="w3-bar-item button">Member Login</a>
     </div>
   </div>
 </div>
@@ -414,73 +364,33 @@ h1 {
 
   </div>
 
-  <!-- Calendar-->
+  <!-- Officers-->
   <div class="container">
-    <!-- Dates-->  
     <div class="event-container">
         <div class="calendar-icon">
-            <span class="event-month">Feb</span>
-            <span class="event-day">14</span>
+            <span class="event-month">Oct</span>
+            <span class="event-day">2</span>
             <i class="far fa-calendar fa-3x"></i>
         </div>
-        <div class="event-title">General Meeting</div>
-        <div class="event-location"><i class="fa fa-map-marker-alt"></i> EER 1.632</div>
-        <div class="event-details">Weekly meeting from 7-8pm. <br>
-          Reach out for more details or visit our <a href="https://linktr.ee/lhneurotech">Link Tree</a> 
-        </div>
+        <div class="event-title">Br41n.io Hackathon</div>
+        <div class="event-location"><i class="fa fa-map-marker-alt"></i> TBD</div>
+        <div class="event-details">The <a href="https://www.br41n.io/"> BR41N.IO</a> Brain-Computer Interface Designers Hackathon has been created as an education opportunity to study current and future developments and unlimited possibilities of brain-computer interfaces and neurotechnologies in creative, scientific and clinical fields. BR41N.IO helps students and professionals to understand artificial intelligence, life science, art and technology, and how they become a unity to evolve innovative and exceptional BCI headpieces.</div>
     </div>
-        <!-- Dates-->  
-        <div class="event-container">
-          <div class="calendar-icon">
-              <span class="event-month">Feb</span>
-              <span class="event-day">16</span>
-              <i class="far fa-calendar fa-3x"></i>
-          </div>
-          <div class="event-title">Guest Speaker</div>
-          <div class="event-location"><i class="fa fa-map-marker-alt"></i> BME 3.204</div>
-          <div class="event-details">Come meet our Guest Speaker at 3pm <br>
-            Reach out for more details or visit our <a href="https://linktr.ee/lhneurotech">Link Tree</a> 
-          </div>
-      </div>
-    <!-- Dates -->
+    <!-- Add more event containers as needed -->
     <div class="event-container">
-        <div class="calendar-icon">
-            <span class="event-month">Feb</span>
-            <span class="event-day">17</span>
-            <i class="far fa-calendar fa-3x"></i>
+        <div class="wrapper">
+            <aside class="aside-1">
+                <span class="event-month">Nov</span>
+                <span class="event-day">6</span>
+                <i class="far fa-calendar fa-3x"></i>
+            </aside>
+            <div class="header">Neuroscience Conference</div>
+            <footer class="footer"><i class="fa fa-map-marker-alt"></i> TBD</footer>
+            <div class="main">Join us for the Neuroscience conference where industry experts will share insights and knowledge.</div>
+        
         </div>
-        <div class="event-title">General Meeting</div>
-        <div class="event-location"><i class="fa fa-map-marker-alt"></i> EER 1.632</div>
-        <div class="event-details">Weekly meeting from 4-6pm.<br>
-          Reach out for more details or visit our <a href="https://linktr.ee/lhneurotech">Link Tree</a> 
-        </div>
+
     </div>
-        <!-- Dates-->  
-        <div class="event-container">
-          <div class="calendar-icon">
-              <span class="event-month">Feb</span>
-              <span class="event-day">21</span>
-              <i class="far fa-calendar fa-3x"></i>
-          </div>
-          <div class="event-title">General Meeting</div>
-          <div class="event-location"><i class="fa fa-map-marker-alt"></i> EER 1.632</div>
-          <div class="event-details">Weekly meeting from 7-8pm.<br>
-            Reach out for more details or visit our <a href="https://linktr.ee/lhneurotech">Link Tree</a> 
-          </div>
-      </div>
-      <!-- Dates -->
-      <div class="event-container">
-          <div class="calendar-icon">
-              <span class="event-month">Feb</span>
-              <span class="event-day">24</span>
-              <i class="far fa-calendar fa-3x"></i>
-          </div>
-          <div class="event-title">General Meeting</div>
-          <div class="event-location"><i class="fa fa-map-marker-alt"></i> EER 1.632</div>
-          <div class="event-details">Weekly meeting from 4-6pm. <br>
-            Reach out for more details or visit our <a href="https://linktr.ee/lhneurotech">Link Tree</a> 
-          </div>
-      </div>
 </div>
 </div>
 <footer class="end">
@@ -499,9 +409,7 @@ h1 {
     </aside>
   
     <aside class="footer-center">
-      <a href="https://www.linkedin.com/company/lhneurotech/about/">
-        <img id="linklogo" src="linkedin.svg" class="w3-hover-opacity" width="9%">
-        </a>
+      <i class="fab fa-linkedin-in fa-3x w3-hover-opacity "></i>
     </aside>
   </footer>
 

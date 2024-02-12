@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script>
+            function protectpasscode() {
+               const result = document.getElementById("tutorial").value;
+               let passcode = 1234;
+               let space = '';
+               if (result == space) {
+                  alert("Type passcode")
+               } else {
+                  if (result == passcode) {
+                     window.location.href = "https://drive.google.com/drive/folders/1sAublkz7nzsVl6qNyLc7EXuq1MJsgnAH";
+                  } else {
+                     alert("Incorrect Passcode");
+                     location.reload();
+                  }
+               }
+            }
+         </script>
+         <style>
+            .login{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50;
+                height: 90vh;
+                place-content: center;
+                margin: none;
+                padding: none;
+            }
+            .form{
+            display: grid;
+            border: 1px solid black;
+            width: 45vw;
+            height: 45vh;
+            place-content: center;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+            body{
+            margin: none;
+            padding: none;
+            background-image: url("brain.gif");
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position-y: 25%;
+            background-color: rgba(0, 0, 0, 0.1);
+            display: block;
+
+            margin-left: auto;
+            margin-right: auto;
+
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+         </style>
+         <title>
+            Page title
+         </title>
+    </head>
+   <body>
+      <center>
+        <div class="login">
+            <div class="form">
+                <p style="font-size: large; ">
+                    Enter password:
+                </p>
+                
+                <input type="password" placeholder="passcode" id="tutorial">
+                <p></p>
+                <button onclick="protectpasscode()">LOGIN</button>   
+            </div>
+
+        </div>
+
+      </center>
+   </body>
+</html>
