@@ -14,7 +14,7 @@
     justify-content: space-between;
     margin-left: 10vw;
     margin-right: 10vw;
-    margin-top: 10vh;
+    margin-top: 4vh;
 }
 .wide{
   letter-spacing:4px
@@ -63,12 +63,13 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    transform: translateY(-5vh) scaleX(-1);
+    transform:  scaleX(-1);
     width: auto; 
-    height: 110%;
+    height: 100%;
     overflow: hidden;
     aspect-ratio: 1/1;
     max-width: 100vw;
+    max-height: 80vh;
 }
 
 .main-container{
@@ -78,6 +79,7 @@
     overflow: hidden;
     transform: translateZ(-10);
     max-width: -webkit-fill-available;
+    max-height: 80vh;
 }
 .text{
     font-size: 16px;
@@ -138,24 +140,24 @@ footer .footer-right {
 }
 .animated-element {
   opacity: 0.6;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
   font-stretch: 85%;
   font-weight: 20;
-  font-size: 85px;
+  font-size: clamp(8px, 12vw, 80px);
   font-family: century-gothic-condensed, sans-serif;
   animation: Fade 2s ease-in-out; /* Use your animation name, duration, and timing function */
 }
 .animated-element2 {
   opacity: 0.7;
-  letter-spacing: 10px;
+  letter-spacing: -1px;
   font-stretch: 80%;
   font-weight: 20;
-  font-size: 80px;
+  font-size: clamp(8px, 12vw, 80px);
   font-family: century-gothic, sans-serif;
   animation: Fade 4s ease-in-out; /* Use your animation name, duration, and timing function */
 }
 .xxlarge{
-  font-size: 80px;
+  font-size: clamp(8px, 12vw, 80px);
 }
 .top{
   top: 0;
@@ -218,27 +220,65 @@ footer .footer-right {
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #95a8c1;}
+
 .option1{
   opacity: 1;
 }
 .option2{
   opacity: 0;
 }
-@media (max-width: 885px){
+@media (max-width: 1110px){
   .option1{
     opacity: 0;
+    display: none;
   }
   .option2{
     opacity: 1;
-    margin-right: 45vw;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 }
 
-footer.end h2{
-  margin: 2vh;
+/* Base button style */
+.w3-button {
+  font-size: 1.25vw; /* Starting font size */
+  padding: 8px 16px; /* Adjust padding to make sure text fits */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden; /* Keeps the text inside the button */
+  text-overflow: ellipsis; /* Adds an ellipsis if the text is too long */
+  max-width: 30vw;
 }
+
+/* Media query for mobile devices*/
+@media (max-width: 600px) {
+  .w3-button {
+    font-size: 1.7vw; /* Larger font size for very small screens */
+    min-width: 22vw;
+  }
+  .footer-right{
+    font-size: 1.7vw;
+  }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1024px) {
+  .w3-button {
+    font-size: 18px; /* Fixed font size for larger screens */
+  }
+  .footer-right{
+    font-size: 32px;
+  }
+}
+
+img.responsive {
+  width: 100%;
+  height: auto;
+  transform: translateY(-20%) translateX(10%);
+  max-width: 600px;
+
+}
+
 
 </style>
 
@@ -250,10 +290,10 @@ footer.end h2{
   <div class="bar w3-white wide card">
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right option1">
-      <a href="home.html" class="logo">
+      <a href="index.html" class="logo">
         <img src="main.jpg" alt="Logo" style="width: 170px;">
       </a>
-      <a href="home.html" class="w3-bar-item button">Home</a>
+      <a href="index.html" class="w3-bar-item button">Home</a>
       <a href="about.html" class="w3-bar-item button">About Us</a>
       <!--<a href="#contact" class="w3-bar-item button">Projects</a>-->
       <a href="events.html" class="w3-bar-item button">Events</a>
@@ -265,7 +305,7 @@ footer.end h2{
       <div class="dropdown">
         <button class="dropbtn"><span class="w3-xlarge">&#9776;</span></button>
         <div class="dropdown-content">
-          <a href="home.html" class="w3-bar-item button">Home</a>
+          <a href="index.html" class="w3-bar-item button">Home</a>
           <a href="about.html" class="w3-bar-item button">About Us</a>
           <a href="events.html" class="w3-bar-item button">Events</a>      
           <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Join Us</a>
@@ -282,7 +322,7 @@ footer.end h2{
     <div class="main-container">
     <img class="main-img" src="brain.gif" draggable="false">
     <div class="w3-display-middle w3-margin-top w3-center">
-      <h1 class="xxlarge w3-text-white"><b class="animated-element">LONGHORN </b> <span class="w3-hide-small w3-text-light-grey animated-element2">NEUROTECH</span></h1>
+      <h1 class="xxlarge w3-text-white"><b class="animated-element">LONGHORN </b> <span class="xxlarge w3-text-light-grey animated-element2">NEUROTECH</span></h1>
 
     </div>
 
@@ -300,26 +340,26 @@ footer.end h2{
 </header>-->
 
 <!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
+<div class="w3-content" style="max-width:1564px">
 
 
   <div class="w3-row-padding col">
     <div class="w3-col l3 m6 w3-margin-bottom" >
         <a href="resources.html" style="text-decoration: none;">
             <img src="NTX_logo.png" alt="Mike" style="width:100%">
-      <p><button class="w3-button w3-light-grey w3-block">Projects</button></p>
+      <p><button class="w3-button w3-light-grey w3-block" >Projects</button></p>
     </a> 
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqPibxY74pcZin-Li3Yg0hm7KQQJbI109jJs4bVTx56GqIjA/viewform" style="text-decoration: none;">
             <img src="NTX_logo.png" alt="Mike" style="width:100%">
-      <p><button class="w3-button w3-light-grey w3-block">Join us</button></p>
+      <p><button class="w3-button w3-light-grey w3-block" >Join us</button></p>
     </a> 
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
         <a href="events.html" style="text-decoration: none;">
             <img src="NTX_logo.png" alt="Mike" style="width:100%">
-      <p><button class="w3-button w3-light-grey w3-block">Upcoming Events</button></p>
+      <p><button class="w3-button w3-light-grey w3-block" >Upcoming Events</button></p>
     </a>          
     </div>
   </div>
@@ -341,9 +381,9 @@ footer.end h2{
   <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center">Contact</h2><br>
 
   <aside class="footer-left w3-hover-opacity">
-    <i class="fa fa-envelope w3-xlarge "></i>
     <a href="mailto:lhneurotech@gmail.com">
-    lhneurotech@gmail.com</a>
+    <i class="fa fa-envelope w3-xlarge "></i>
+    </a>
   </aside>
 
   <aside class="footer-right">
@@ -359,6 +399,7 @@ footer.end h2{
     </a>
   </aside>
   </div>
+  <br>
 
   <div>
 
@@ -366,11 +407,11 @@ footer.end h2{
 
   <aside class="footer-left w3-hover-opacity">
     <a href="https://inventionworks.engr.utexas.edu" target="_blank">
-      <img src="https://inventionworks.engr.utexas.edu/templates/makerstudios/images/TX-invent-logo-01.svg" alt="Texas TIW"> 
+      <img src="https://inventionworks.engr.utexas.edu/templates/makerstudios/images/TX-invent-logo-01.svg" alt="Texas TIW" class="responsive"> 
     </a>
   </aside>
 
-  <aside class="footer-right">
+  <aside class="footer-right w3-hover-opacity">
     <a href="https://neurotechx.com" target="_blank">
       <img class="partners" src="https://neurotechx.com/wp-content/uploads/2018/01/logo.png" alt="NTX"> 
     </a>
