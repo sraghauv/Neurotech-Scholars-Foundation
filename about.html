@@ -256,19 +256,57 @@ footer .footer-right {
 .option2{
   opacity: 0;
 }
-@media (max-width: 1110px){
+@media (max-width: 885px){
   .option1{
     opacity: 0;
-    display: none;
   }
   .option2{
     opacity: 1;
+    margin-right: 45vw;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 }
+.InfoDrop {
+  background-color:white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
 
+.InfoDropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.InfoDropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    /* Remove the 'right' property */
+    right: auto;
+  /* Add the following properties */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.InfoDropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.InfoDropdown-content a:hover {background-color: #ddd;}
+
+.InfoDropdown:hover .InfoDropdown-content {display: block;}
+
+.infoDropdown:hover .InfoDrop {background-color: #95a8c1;}
 </style>
 </head>
 <body>
@@ -282,12 +320,17 @@ footer .footer-right {
         <img src="main.jpg" alt="Logo" style="width: 170px;">
       </a>
       <a href="index.html" class="w3-bar-item button">Home</a>
-      <a href="about.html" class="w3-bar-item button">About Us</a>
       <!--<a href="#contact" class="w3-bar-item button">Projects</a>-->
       <a href="events.html" class="w3-bar-item button">Events</a>
-      <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Join Us</a>
+      <div class="InfoDropdown">
+        <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">More Info</a>
+      <div class="InfoDropdown-content">
       <a href="resources.html" class="w3-bar-item button">Resources</a>
-      <a href="login.html" class="w3-bar-item button">Member Login</a>
+      <a href="about.html" class="w3-bar-item button">About Us</a>
+
+      </div>
+    </div>
+      <a href="login.html" class="w3-bar-item button" >Member Login</a>
     </div>
     <div class="option2">
       <div class="dropdown">
@@ -296,7 +339,7 @@ footer .footer-right {
           <a href="index.html" class="w3-bar-item button">Home</a>
           <a href="about.html" class="w3-bar-item button">About Us</a>
           <a href="events.html" class="w3-bar-item button">Events</a>      
-          <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Join Us</a>
+          <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Info</a>
           <a href="resources.html" class="w3-bar-item button">Resources</a>
           <a href="login.html" class="w3-bar-item button">Member Login</a>
         </div>
@@ -372,7 +415,7 @@ footer .footer-right {
   
       <!-- Grid for photos -->
       <div class="row-padding" >
-        <div class="half" style="width:45%;">
+        <div class="half" style="width:45vw;">
           <div class="card">
           <div class = "pfp-circle margin-right w3-left">
             <img src="Ella_Nyenhuis.jpeg" alt="picture" class="w3-left pfp margin-right" style="transform: translate3d(0px,-10px,0)">
@@ -428,7 +471,7 @@ footer .footer-right {
         </div>
   
         <div class="half">
-          <div class="margin-left2" style="width:90%;">
+          <div class="margin-left2" style="width:45vw;">
   
           <div class="card">
           <div class = "pfp-circle margin-right w3-left" >

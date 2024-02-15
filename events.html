@@ -347,16 +347,15 @@ h1 {
 .option2{
   opacity: 0;
 }
-@media (max-width: 1110px){
+@media (max-width: 885px){
   .option1{
     opacity: 0;
-    display: none;
   }
   .option2{
     opacity: 1;
+    margin-right: 45vw;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 }
 #linklogo{
@@ -365,43 +364,87 @@ h1 {
   transform: translateY(-8px);
   background-color: white;
 }
+.InfoDrop {
+  background-color:white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
 
-  
-  </style>
-  </head>
-  <body>
-  
-  <!-- Navbar (sit on top) -->
-  <div class="top">
-    <div class="bar w3-white wide top-card">
-      <!-- Float links to the right. Hide them on small screens -->
-      <div class="w3-right option1">
-        <a href="index.html" class="logo">
-          <img src="main.jpg" alt="Logo" style="width: 170px;">
-        </a>
-        <a href="index.html" class="w3-bar-item button">Home</a>
-        <a href="about.html" class="w3-bar-item button">About Us</a>
-        <!--<a href="#contact" class="w3-bar-item button">Projects</a>-->
-        <a href="events.html" class="w3-bar-item button">Events</a>
-        <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Join Us</a>
-        <a href="resources.html" class="w3-bar-item button">Resources</a>
-        <a href="login.html" class="w3-bar-item button">Member Login</a>
+.InfoDropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.InfoDropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    /* Remove the 'right' property */
+    right: auto;
+  /* Add the following properties */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.InfoDropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.InfoDropdown-content a:hover {background-color: #ddd;}
+
+.InfoDropdown:hover .InfoDropdown-content {display: block;}
+
+.infoDropdown:hover .InfoDrop {background-color: #95a8c1;}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="top">
+  <div class="bar w3-white wide top-card">
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right option1">
+      <a href="index.html" class="logo">
+        <img src="main.jpg" alt="Logo" style="width: 170px;">
+      </a>
+      <a href="index.html" class="w3-bar-item button">Home</a>
+      <!--<a href="#contact" class="w3-bar-item button">Projects</a>-->
+      <a href="events.html" class="w3-bar-item button">Events</a>
+      <div class="InfoDropdown">
+        <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">More Info</a>
+      <div class="InfoDropdown-content">
+      <a href="resources.html" class="w3-bar-item button">Resources</a>
+      <a href="about.html" class="w3-bar-item button">About Us</a>
+
       </div>
-      <div class="option2">
-        <div class="dropdown">
-          <button class="dropbtn"><span class="w3-xlarge">&#9776;</span></button>
-          <div class="dropdown-content">
-            <a href="index.html" class="w3-bar-item button">Home</a>
-            <a href="about.html" class="w3-bar-item button">About Us</a>
-            <a href="events.html" class="w3-bar-item button">Events</a>      
-            <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Join Us</a>
-            <a href="resources.html" class="w3-bar-item button">Resources</a>
-            <a href="login.html" class="w3-bar-item button">Member Login</a>
-          </div>
+    </div>
+      <a href="login.html" class="w3-bar-item button" >Member Login</a>
+    </div>
+    <div class="option2">
+      <div class="dropdown">
+        <button class="dropbtn"><span class="w3-xlarge">&#9776;</span></button>
+        <div class="dropdown-content">
+          <a href="index.html" class="w3-bar-item button">Home</a>
+          <a href="about.html" class="w3-bar-item button">About Us</a>
+          <a href="events.html" class="w3-bar-item button">Events</a>      
+          <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Info</a>
+          <a href="resources.html" class="w3-bar-item button">Resources</a>
+          <a href="login.html" class="w3-bar-item button">Member Login</a>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 <div class="padding">
 
@@ -437,9 +480,9 @@ h1 {
               <span class="event-day">16</span>
               <i class="far fa-calendar fa-3x"></i>
           </div>
-          <div class="event-title">Guest Speaker</div>
-          <div class="event-location"><i class="fa fa-map-marker-alt"></i> BME 3.204</div>
-          <div class="event-details">Come meet our Guest Speaker at 3pm <br>
+          <div class="event-title">Guest Speaker: Dr. Ramses Alcaide</div>
+          <div class="event-location"><i class="fa fa-map-marker-alt"></i> EER 1.508</div>
+          <div class="event-details">Join us for a live discussion with the CEO of Neurable to explore the intersection of AI, brain computer interfacing, and wearable devices from 3-4pm. <br>
             Reach out for more details or visit our <a href="https://linktr.ee/lhneurotech">Link Tree</a> 
           </div>
       </div>

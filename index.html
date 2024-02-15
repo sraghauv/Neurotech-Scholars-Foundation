@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Longhorn NeuroTech</title>
-<link rel="icon" href="main_logo.jpg" type="image/x-icon">
+<link rel="icon" href="main_logo.jpg" type="image/png" sizes="196x196">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -276,8 +276,47 @@ img.responsive {
   height: auto;
   transform: translateY(-20%) translateX(10%);
   max-width: 600px;
-
 }
+.InfoDrop {
+  background-color:white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.InfoDropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.InfoDropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    /* Remove the 'right' property */
+    right: auto;
+  /* Add the following properties */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.InfoDropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.InfoDropdown-content a:hover {background-color: #ddd;}
+
+.InfoDropdown:hover .InfoDropdown-content {display: block;}
+
+.infoDropdown:hover .InfoDrop {background-color: #95a8c1;}
 
 
 </style>
@@ -294,11 +333,16 @@ img.responsive {
         <img src="main.jpg" alt="Logo" style="width: 170px;">
       </a>
       <a href="index.html" class="w3-bar-item button">Home</a>
-      <a href="about.html" class="w3-bar-item button">About Us</a>
       <!--<a href="#contact" class="w3-bar-item button">Projects</a>-->
       <a href="events.html" class="w3-bar-item button">Events</a>
-      <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Join Us</a>
+      <div class="InfoDropdown">
+        <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">More Info</a>
+      <div class="InfoDropdown-content">
       <a href="resources.html" class="w3-bar-item button">Resources</a>
+      <a href="about.html" class="w3-bar-item button">About Us</a>
+
+      </div>
+    </div>
       <a href="login.html" class="w3-bar-item button" >Member Login</a>
     </div>
     <div class="option2">
@@ -308,7 +352,7 @@ img.responsive {
           <a href="index.html" class="w3-bar-item button">Home</a>
           <a href="about.html" class="w3-bar-item button">About Us</a>
           <a href="events.html" class="w3-bar-item button">Events</a>      
-          <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Join Us</a>
+          <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Info</a>
           <a href="resources.html" class="w3-bar-item button">Resources</a>
           <a href="login.html" class="w3-bar-item button" >Member Login</a>
         </div>
@@ -346,19 +390,19 @@ img.responsive {
   <div class="w3-row-padding col">
     <div class="w3-col l3 m6 w3-margin-bottom" >
         <a href="resources.html" style="text-decoration: none;">
-            <img src="NTX_logo.png" alt="Mike" style="width:100%">
+            <img src="just_brain.jpg" alt="Mike" style="width:100%">
       <p><button class="w3-button w3-light-grey w3-block" >Projects</button></p>
     </a> 
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqPibxY74pcZin-Li3Yg0hm7KQQJbI109jJs4bVTx56GqIjA/viewform" style="text-decoration: none;">
-            <img src="NTX_logo.png" alt="Mike" style="width:100%">
+            <img src="just_brain.jpg" alt="Mike" style="width:100%">
       <p><button class="w3-button w3-light-grey w3-block" >Join us</button></p>
     </a> 
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
         <a href="events.html" style="text-decoration: none;">
-            <img src="NTX_logo.png" alt="Mike" style="width:100%">
+            <img src="just_brain.jpg" alt="Mike" style="width:100%">
       <p><button class="w3-button w3-light-grey w3-block" >Upcoming Events</button></p>
     </a>          
     </div>

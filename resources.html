@@ -108,6 +108,10 @@ p{
   width: 50.9%;
   overflow: hidden;
 }
+h1{
+  padding: none;
+  margin: none;
+}
 .pfp{
   display: inline;
   margin: 0 auto;
@@ -124,7 +128,7 @@ p{
   transform: translate3d(0,0,0);
 }
 .card{
-  border: 10px solid transparent;
+  border: 1px solid transparent;
   transform: scale(90%);
 }
 .card .text{
@@ -239,7 +243,7 @@ footer .footer-right {
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: none
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -268,7 +272,46 @@ footer .footer-right {
     align-items: center;
   }
 }
+.InfoDrop {
+  background-color:white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
 
+.InfoDropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.InfoDropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    /* Remove the 'right' property */
+    right: auto;
+  /* Add the following properties */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.InfoDropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.InfoDropdown-content a:hover {background-color: #ddd;}
+
+.InfoDropdown:hover .InfoDropdown-content {display: block;}
+
+.infoDropdown:hover .InfoDrop {background-color: #95a8c1;}
 </style>
 </head>
 <body>
@@ -282,12 +325,17 @@ footer .footer-right {
         <img src="main.jpg" alt="Logo" style="width: 170px;">
       </a>
       <a href="index.html" class="w3-bar-item button">Home</a>
-      <a href="about.html" class="w3-bar-item button">About Us</a>
       <!--<a href="#contact" class="w3-bar-item button">Projects</a>-->
       <a href="events.html" class="w3-bar-item button">Events</a>
-      <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">Join Us</a>
+      <div class="InfoDropdown">
+        <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">More Info</a>
+      <div class="InfoDropdown-content">
       <a href="resources.html" class="w3-bar-item button">Resources</a>
-      <a href="login.html" class="w3-bar-item button">Member Login</a>
+      <a href="about.html" class="w3-bar-item button">About Us</a>
+
+      </div>
+    </div>
+      <a href="login.html" class="w3-bar-item button" >Member Login</a>
     </div>
     <div class="option2">
       <div class="dropdown">
@@ -329,7 +377,7 @@ footer .footer-right {
         <ul>
           <li>Step 1: Fill out this <a href="https://docs.google.com/forms/d/1fTgPHwVDWSrszToIaMpFDQ-V82hBRjxBRKsRxQOc6-0/edit">form</a></li>
           <li>Step 2: Join our <a href="https://join.slack.com/t/longhornneurotech/shared_invite/zt-2crzzxr7o-LVHcGn5NmJNT1KsBOSQ6pA">slack</a> and add yourself to channels that interest you</li>
-          <li>Step 3: Show up to meetings @ EER 1.632 on Wednesday 7-8 pm and Sunday 4-6 pm</li>
+          <li>Step 3: Show up to meetings @ <b>EER 1.632</b> on <b>Wednesday 7-8 pm</b> and <b>Sunday 4-6 pm</b></li>
           <li>Step 4: Start looking at the onboarding project! This will be different for hardware and software (see below)</li>
         </ul>
 
@@ -337,7 +385,7 @@ footer .footer-right {
         <a href="https://drive.google.com/drive/folders/1LQUUZH2MXKNne4NAhyOqTDDoa1px00pv?usp=sharing" style="text-decoration: none;">
         <div class="card">
             <div>
-                <h1 ><span class="w3-xlarge margin-top"> Educational Presentations:</span> </h1>
+                <h1 ><span class="w3-xlarge"> Educational Presentations:</span> </h1>
                 <p class="margin-bottom2"> This link contains presentations the team thinks are valuable effective participation in Longhorn Neurotech.</p>
             </div>
         </div>
@@ -346,7 +394,7 @@ footer .footer-right {
         <a href="https://docs.google.com/spreadsheets/d/1mz17sFVws7mXz0JNKQBy-KoAojlp_mkb2tXXQp-MK4M/edit?usp=sharing" style="text-decoration: none;">
             <div class="card">
                 <div>
-                    <h1 ><span class="w3-xlarge margin-top"> Opportunities Database:</span> </h1>
+                    <h1 ><span class="w3-xlarge"> Opportunities Database:</span> </h1>
                     <p class="margin-bottom2"> Simply Neuroscience has compiled a database of over 1000 oppurtunities in the fields of neuroscience and psychology.</p>
                 </div>
             </div>
@@ -355,38 +403,36 @@ footer .footer-right {
         <a href="https://neurotechx.com/" style="text-decoration: none;">
             <div class="card">
                 <div>
-                    <h1 ><span class="w3-xlarge margin-top"> NeuroTechX:</span> </h1>
+                    <h1 ><span class="w3-xlarge"> NeuroTechX:</span> </h1>
                     <p class="margin-bottom2"> NeuroTechX is our parent organization. Read more about them here.</p>
                 </div>
             </div>
         </a>
 
-        <h2 class="margin-top"> Software</h2>  
+        <h2 class="margin-top"> Project teams</h2>  
         <a href="https://github.com/lhneurotech/PracticeNotebooks" style="text-decoration: none;">
         <div class="card">
             <div>
-                <h1 ><span class="w3-xlarge margin-top"> Onboarding Packet:</span> </h1>
+                <h1 ><span class="w3-xlarge "> Software Onboarding Packet:</span> </h1>
                 <p class="margin-bottom2"> If you are interested in joining the software team please check out this github repository. This repo has notebooks covering basics in machine learning and EEG signal processing.</p>
             </div>
         </div>
         </a>
 
-        <h2 class="margin-top"> Research & Developement</h2>  
         <a href="#include" style="text-decoration: none;">
         <div class="card">
             <div>
-                <h1 ><span class="w3-xlarge margin-top"> Onboarding Packet:</span> </h1>
+                <h1 ><span class="w3-xlarge">R&D Onboarding Packet:</span> </h1>
                 <p class="margin-bottom2"> R&D packet is under construction.</p>
             </div>
         </div>
         </a>
 
 
-        <h2 class="margin-top"> Hardware</h2>  
         <a href="https://docs.google.com/document/d/1vVw5xk0hPn4ErMnxzEDm0GV7P0Rrp_aPiaHt010eWH8/edit?usp=sharing" style="text-decoration: none;">
         <div class="card">
             <div>
-                <h1 ><span class="w3-xlarge margin-top"> Onboarding Packet:</span> </h1>
+                <h1 ><span class="w3-xlarge">Hardware Onboarding Packet:</span> </h1>
                 <p class="margin-bottom2"> If you are interested in joining the hardware team please check out this document.</p>
             </div>
         </div>
