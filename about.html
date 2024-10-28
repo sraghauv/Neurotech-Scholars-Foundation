@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Longhorn NeuroTech</title>
 <meta charset="UTF-8">
@@ -9,68 +9,84 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-.col{
+/* Base styles */
+body {
+  margin: 0;
+  padding-top: 80px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Fixed Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-image {
+  height: 60px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-button {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #95a8c1;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+/* Existing styles */
+.col {
     display: flex;
     justify-content: space-between;
     margin-left: 10vw;
     margin-right: 10vw;
 }
-.button{
-  border:none;
-  background-color: aliceblue;
-  display:inline-block;
-  padding:8px 16px;
-  vertical-align:middle;
-  overflow:hidden;
-  text-decoration:none;
-  color:inherit;
-  text-align:center;
-  cursor:pointer;
-  white-space:nowrap;
-  border-radius: 5px;
-}
-.top-card{
-  display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 12vh;
-    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
-}
-.display-container{
-    background-image: url('brain.gif');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: -60vh ;
-    border: 2px solid black;
-    width: 100vw;
-    height: 80vh;
-    margin-top: 12vh;
-}
-.main-img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    transform: translateY(-10vh) scaleX(-1);
-    width: 85%; 
-    height: 140vh;
-}
-.main-container{
-    background-color: black;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    transform: translateZ(-10)
-}
-p{
-    font-size: 16px;
-    line-height: 1.8em;
-}
-.padding{
+
+.padding {
     padding-top: 5vh;
 }
-#about h3{
+
+#about h3 {
     font-size: 56px;
     background: transparent;
     vertical-align: baseline;
@@ -78,68 +94,78 @@ p{
     text-align: center;
     color: #6f88ae;
 }
-.lead{
-  margin-bottom: none;
-  align-self: flex-end;
+
+.pfp-circle {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
-.margin-right{
-  margin-right: 5%;
+
+.pfp {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.margin-left{
-  margin-left: 10%;
+
+.card {
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: all 0.7s ease;
+    border: 10px solid transparent;
+    transform: scale(90%);
 }
-.margin-bottom{
-  margin-bottom: 30%;
+
+.card:hover {
+    transform: scale(100%) translate3d(0,0px,20px);
+    background-color: rgba(111,136,174, 0.3);
 }
-.margin-bottom2{
-  margin-bottom: 2%;
+
+.card .text {
+    display: flex;
+    opacity: 0;
+    transition: all 0.7s ease;
+    justify-content: center;
+    transform: translate3d(0,-60px,0);
 }
-.pfp-circle{
-  width: 140px;
-  height: 140px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
+
+.card:hover .text {
+    margin-left: 7%;
+    margin-right: 7%;
+    display: flex;
+    opacity: 1;
+    transition: all 0.7s ease;
+    justify-content: center;
+    transform: translate3d(0,0,0);
 }
-.half{
-  float: left;
-  margin-left: auto;
-  height: 20%;
-  width: 50.9%;
-  overflow: hidden;
+
+.row-padding {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
-.pfp{
-  display: inline;
-  margin: 0 auto;
-  width: 100%;
-  height: auto;
+
+.half {
+    width: 50%;
+    padding: 0 15px;
 }
-.card:hover .text{
-  margin-left: 7%;
-  margin-right: 7%;
-  display: flex;
-  opacity: 1;
-  transition: all 0.7s ease;
-  justify-content: center;
-  transform: translate3d(0,0,0);
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
-.card{
-  border: 10px solid transparent;
-  transform: scale(90%);
-}
-.card .text{
-  display: flex;
-  opacity: 0;
-  transition: all 0.7s ease;
-  justify-content: center;
-  transform: translate3d(0,-60px,0);
-}
+
 footer [class ^= 'footer-'] {
     width: 33.3333%;
     display: inline-block;
     text-align: center;
     margin-bottom: 1%;
 }
+
 footer .footer-left {
     float: left;
     font-family: "Segoe UI",Arial,sans-serif;
@@ -151,385 +177,271 @@ footer .footer-right {
     margin: none;
     transform: translateY(-30%);
 }
-.end{
-  background-color: black;
-  color: white;
-  width: 100vw;
-  position: absolute;
-}
-.card:hover{
-  transition: all 0.7s ease;
-  transform: scale(100%);
-  transform: translate3d(0,0px,20px);
-  background-color: rgb(111,136,174, 0.3);
-}
-.half{
-    float: left;
-    margin-left: 3%;
-    overflow: hidden;
-}
-.row-padding{
-    display: flex;
-    justify-content: space-between;
-    border: 2px pink;
-}
-.button:hover{
-  background-color: #95a8c1;
-}   
-.logo{
-  border:none;
-  display:inline-block;
-  vertical-align:middle;
-  overflow:hidden;
-  text-decoration:none;
-  color:inherit;
-  background-color:inherit;
-  cursor:pointer;
-}
-.top{
-  top: 0;
-}
-.option1 ul, .option2 ul {
-  display: none; /* Hide the default list */
-  flex-direction: column; /* Display dropdown items vertically */
-  position: absolute;
-  background-color: #fff; /* Background color for dropdown */
-  border: 1px solid #ccc; /* Border for dropdown */
-  z-index: 1;
-  text-decoration: none;
-}
-.option1 ul li, .option2 ul li {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-.option1:hover ul, .option2:hover ul {
-  display: flex; /* Display the dropdown when hovering over the option */
-  list-style-type: none;
-}
-.dropbtn {
-  background-color:white;
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+
+.end {
+    background-color: black;
+    color: white;
+    width: 100vw;
+    position: absolute;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+/* Responsive Design */
+@media (max-width: 885px) {
+    .nav-links {
+        display: none;
+    }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-    /* Remove the 'right' property */
-    right: auto;
-  /* Add the following properties */
-  left: 50%;
-  transform: translateX(-50%);
-}
-.wide{
-  letter-spacing:4px
-}
+    .mobile-menu {
+        display: block;
+    }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
+    .half {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .row-padding {
+        margin: 0;
+    }
+
+    .pfp-circle {
+        margin: 0 auto 20px;
+    }
+
+    .card {
+        text-align: center;
+    }
 }
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #95a8c1;}
-.option1{
-  opacity: 1;
-}
-.option2{
-  opacity: 0;
-}
-@media (max-width: 885px){
-  .option1{
-    opacity: 0;
-  }
-  .option2{
-    opacity: 1;
-    margin-right: 45vw;
-    display: flex;
-    justify-content: center;
-  }
-}
-.InfoDrop {
-  background-color:white;
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-.InfoDropdown{
-  position: relative;
-  display: inline-block;
-}
-
-.InfoDropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-    /* Remove the 'right' property */
-    right: auto;
-  /* Add the following properties */
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.InfoDropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-}
-
-.InfoDropdown-content a:hover {background-color: #ddd;}
-
-.InfoDropdown:hover .InfoDropdown-content {display: block;}
-
-.infoDropdown:hover .InfoDrop {background-color: #95a8c1;}
 </style>
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="top">
-  <div class="bar w3-white wide top-card">
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right option1">
-      <a href="index.html" class="logo">
-        <img src="main.jpg" alt="Logo" style="width: 170px;">
-      </a>
-      <a href="index.html" class="w3-bar-item button">Home</a>
-      <!--<a href="#contact" class="w3-bar-item button">Projects</a>-->
-      <a href="events.html" class="w3-bar-item button">Events</a>
-      <a href="about.html" class="w3-bar-item button">About Us</a>
-      <!--<div class="InfoDropdown"> -->
-      <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">More Info</a>
-      <!--> <div class="InfoDropdown-content"> -->
-      <a href="resources.html" class="w3-bar-item button">Resources</a>
-      
+<!-- Fixed Navigation -->
+<nav class="navbar">
+  <a href="home.html" class="logo-link">
+    <img src="main.jpg" alt="Longhorn NeuroTech Logo" class="logo-image">
+  </a>
+  
+  <div class="nav-links">
+    <a href="home.html" class="nav-button">Home</a>
+    <a href="about.html" class="nav-button">About Us</a>
+    <a href="events.html" class="nav-button">Events</a>
+    <a href="https://linktr.ee/lhneurotech" class="nav-button">Join Us</a>
+  </div>
 
-      </div>
-    </div>
-      <a href="login.html" class="w3-bar-item button" >Member Login</a>
-    </div>
-    <div class="option2">
-      <div class="dropdown">
-        <button class="dropbtn"><span class="w3-xlarge">&#9776;</span></button>
-        <div class="dropdown-content">
-          <a href="index.html" class="w3-bar-item button">Home</a>
-          <a href="about.html" class="w3-bar-item button">About Us</a>
-          <a href="events.html" class="w3-bar-item button">Events</a>      
-          <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">More Info</a>
-          <!--<a href="resources.html" class="w3-bar-item button">Resources</a>-->
-          <a href="login.html" class="w3-bar-item button">Member Login</a>
-        </div>
-      </div>
+  <div class="mobile-menu">
+    <button class="nav-button">☰</button>
+    <div class="dropdown-content">
+      <a href="home.html" class="nav-button">Home</a>
+      <a href="about.html" class="nav-button">About Us</a>
+      <a href="events.html" class="nav-button">Events</a>
+      <a href="https://linktr.ee/lhneurotech" class="nav-button">Join Us</a>
     </div>
   </div>
-</div>
+</nav>
 
-<div class="padding">
-
-</div>
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32 text" id="about">
+<!-- About Section -->
+<div class="w3-container w3-padding-32 text" id="about">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About Us</h3>
     <p>Welcome to Longhorn Neurotech, a student organization with a singular focus: facilitating your entry into the world of neural engineering. Our purpose is to provide you with the knowledge, experiences, and connections necessary for a successful career in academia or industry.
     Through active participation in the NeuroTechX (NTX) international undergraduate student competition, we offer a platform for you to sharpen your skills and collaborate with like-minded peers. This competition not only hones your abilities but also cultivates a sense of teamwork that is invaluable in the field.
     In addition to competition, we take education seriously. Our club is dedicated to creating and curating educational content that ensures a deep understanding of neural engineering concepts. We believe that a strong foundation is crucial for your growth in this complex field.
     Furthermore, we understand the significance of networking. Longhorn Neurotech provides opportunities to connect with guest speakers who are established professionals in neural engineering. Conferences and events organized by our club offer a chance to broaden your perspectives and create connections that may shape your future.
-    In essence, Longhorn Neurotech is your stepping stone into the neural engineering domain. We invite you to join us in this journey of learning, collaborating, and networking, as we equip you with the tools to thrive in the exciting realm of neural engineering. 
-    </p>
-  </div>
-
-  <!-- Officers-->
-  <div class=".w3-white" id="officers">
-    <div style="margin-right: -1vw;">
-      <div class="margin-top"><br></div>
-      <h2 class="margin-top"> Executive Officers</h2>  
-      <hr style="width:270px; margin-bottom: 40px;" class="w3-opacity">
-      
-      <div class="card">
-      <div class = "pfp-circle margin-right w3-left" style="width:180px; height: 180px;">
-        <img src="Taima Crean.jpg" alt="picture" class="pfp" style="height: 220px;width: 220px; transform: translate3d(-15px,-15px,0);">        
-      </div>
-      <div >
-        <h1 ><span class="w3-xlarge margin-top"> President:</span> </h1>
-        <h2 ><span class="w3-xlarge margin-top">  Taima Crean</span> </h2>
-        <p class="margin-bottom2"> Taima Crean is the President and Co-Founder of Longhorn Neurotech. She is a Junior studying Biomedical Engineering with a focus in computation and double minors in Business and Computer Science. In her work she uses deep learning to optimize radiation treatment for lung cancer patients. She has a passion for innovation and hopes to one day work on machine learning applications in healthcare. </p>
-      </div>
-      <div class="text">
-        <i class="fa fa-linkedin fa-3x w3-hover-opacity "></i>
-      
-      </div> 
-    </div>
-    <div class="card">
-        <div style="margin-bottom: 5%;"><br></div>
-        <div class = "pfp-circle margin-right w3-left" style="width:180px; height: 180px; margin-bottom: 1%;">
-          <img src="holland1.jpg" alt="picture" class=" pfp w3-left" style="width:300px; transform: translate3d(-63px,-75px,0);">      
-        </div>
-        <div >
-          <h1><span class="w3-xlarge margin-top"> Captain:</span> </h1>
-          <h2><span class="w3-xlarge margin-top"> Holland Ernst </span> </h2>
-          <p > Holland Ernst is the Captain and Co-Founder of Longhorn Neurotech, and he is a third-year biomedical engineering undergraduate planning to pursue a Master's BME with a specification in neural engineering. His mission is to bridge the gap between the brain and the vast world around us. Being part of Longhorn Neurotech and collaborating with such remarkably talented and diverse individuals not only excites him but also drives him forward in the pursuit of a career in neural engineering and BCI.</p>
-        </div>
-        <div class="text">
-          <a href="https://www.linkedin.com/in/holland-ernst/" target="_blank">
-          <i class="fa fa-linkedin fa-3x w3-hover-opacity "></i>
-        </a>
-
-        </div> 
-
-    </div>
-
-    <!-- End About Section -->
-    </div>
-    
-    <!-- Portfolio Section -->
-    <div class="content" >
-      <h2 class="margin-top">Leadership Team</h2>
-      <hr style="width:255px" class="w3-opacity">
-      
-        <!-- Grid for photos -->
-        <div class="row-padding">
-          <div class="half">
-            
-            <div class="card">
-              <div class="pfp-circle margin-right w3-left">
-                <img src="julian-weaver.jpeg" alt="Julian Weaver" class="pfp" style="transform: translate3d(0px,-20px,0)">
-              </div>
-              <p><span class="w3-xlarge"> R&D Lead</span></p>
-              <p><span class="w3-xlarge">Julian Weaver</span></p>
-              <p class="margin-bottom2"> Julian Weaver is a fourth-year double major in Neuroscience and Computer Science, with a minor in Business. A founding member of the DMIC lab’s neuro team, he plans to pursue a PhD focused on neuroimaging and invasive brain-computer interfaces. In his free time, he enjoys producing music and rock climbing.</p>
-              <div class="text">
-                <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
-              </div>
-            </div>
-      
-            <div class="card">
-              <div class="pfp-circle margin-right w3-left">
-                <img src="tony_chae.jpg" alt="Tony Chae" class="pfp", style="transform: translate3d(0,22.5px,0) scale(1.6);">
-              </div>
-              <p><span class="w3-xlarge margin-bottom"> VP of Outreach:</span></p>
-              <p><span class="w3-xlarge margin-bottom">Tony Chae</span></p>
-              <p class="margin-bottom2"> Tony Chae is a Junior Electrical and Computer Engineering student with a minor in Philosophy interested in brains, minds and machines. In his free time, Tony practices meditation, enjoys reading, cooking, working out (including ice skating, Brazilian Jiu-Jitsu, and running), photography, and exploring nature.</p>
-              <div class="text">    
-                <a href="https://www.linkedin.com/in/tony-chae-3bb600249/" target="_blank">
-                <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
-                </a>    
-              </div>  
-            </div>
-
-            
-      
-            <div class="card">
-              <div class="pfp-circle margin-right w3-left">
-                <img src="pfp.png" alt="VP of Finance" class="w3-left pfp margin-right">
-              </div>
-              <p><span class="w3-large"> VP of Finance</span></p>
-              <p><span class="w3-large"> TBD</span></p>
-              <p class="margin-bottom2"> description</p>
-              <div class="text">    
-                <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i> 
-              </div>
-            </div>
-    
-          </div>
-      
-          <div class="half">
-            <div class="card">
-              <div class="pfp-circle margin-right w3-left">
-                <img src="Alan Fletcher.jpg" alt="Alan Fletcher" class="w3-left pfp margin-right" style="transform: translate3d(0px,-40px,0)">
-              </div>
-              <p><span class="w3-xlarge margin-bottom"> Hardware Lead:</span></p>
-              <p><span class="w3-xlarge margin-bottom">Alan Fletcher</span></p>
-              <p class="margin-bottom2"> I am a 4th year BME and member of the Longhorn Band. My prospective career is in clinical prosthetics/orthotics and I am currently doing research in Dr. Fey's Systems for Augmenting Human Mechanics Lab. </p>
-              <div class="text">  
-                <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
-              </div>
-            </div>
-      
-            <div class="card">
-              <div class="pfp-circle margin-right w3-left">
-                <img src="Nathan_Feldt.JPG" alt="Nathan Feldt" class="w3-left pfp margin-right" style="transform: translate3d(0px,10px,0) scale(1.3)">
-              </div>
-              <p><span class="w3-xlarge margin-bottom"> Software Lead:</span></p>
-              <p><span class="w3-xlarge margin-bottom">Nathan Feldt</span></p>
-              <p class="margin-bottom2"> I am a Junior Neuroscience and Math double Major. I am originally from Seattle but Austin is my second home. I love to Golf, watch Texas Football, and do all things Neuroscience. </p>
-              <div class="text">  
-                <a href="https://www.linkedin.com/in/nathan-feldt-1b6573229/" target="_blank">
-                <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
-                </a>
-              </div>
-            </div>
-      
-            <div class="card">
-              <div class="pfp-circle margin-right w3-left">
-                <img src="Vivek-Beeram.jpg" alt="Vivek Beeram" class="pfp">
-              </div>
-              <p><span class="w3-xlarge"> Machine Learning Specialist</span></p>
-              <p><span class="w3-xlarge">Vivek Beeram</span></p>
-              <p class="margin-bottom2"> My name is Vivek. I'm a junior neuroscience/Plan II student interested in neural evolution and neural network architecture. I'm excited to start building with this team and taking on cutting-edge BCI challenges. I enjoy climbing, exploring nature, and playing chess.</p>
-              <div class="text">
-                <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-    </div>
-          <!-- Contact Section -->
-<!-- End page content -->
+    In essence, Longhorn Neurotech is your stepping stone into the neural engineering domain. We invite you to join us in this journey of learning, collaborating, and networking, as we equip you with the tools to thrive in the exciting realm of neural engineering.</p>
 </div>
 
+<!-- Officers-->
+<div class="w3-white" id="officers">
+  <div style="margin-right: -1vw;">
+    <div class="margin-top"><br></div>
+    <h2 class="margin-top">Executive Officers</h2>  
+    <hr style="width:270px; margin-bottom: 40px;" class="w3-opacity">
+    
+    <!-- Taima Crean - President -->
+    <div class="card">
+      <div class="pfp-circle margin-right w3-left" style="width:180px; height: 180px;">
+        <img src="Taima Crean.jpg" alt="picture" class="pfp" style="height: 220px;width: 220px; transform: translate3d(-15px,-15px,0);">        
+      </div>
+      <div>
+        <h1><span class="w3-xlarge margin-top">President:</span></h1>
+        <h2><span class="w3-xlarge margin-top">Taima Crean</span></h2>
+        <p class="margin-bottom2">Taima Crean is the President and Co-Founder of Longhorn Neurotech. She is a part of the class of 2025 studying Biomedical Engineering with a focus in computation and double minors in Business and Computer Science. In her work she uses deep learning to optimize radiation treatment for lung cancer patients. She has a passion for innovation and hopes to one day work on machine learning applications in healthcare.</p>
+      </div>
+      <div class="text">
+        <a href="https://www.linkedin.com/in/taima00" target="_blank">
+          <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
+        </a>
+      </div> 
+    </div>
 
+    <!-- Holland Ernst - Captain -->
+    <div class="card">
+      <div style="margin-bottom: 5%;"><br></div>
+      <div class="pfp-circle margin-right w3-left" style="width:180px; height: 180px; margin-bottom: 1%;">
+        <img src="holland1.jpg" alt="picture" class="pfp w3-left" style="width:300px; transform: translate3d(-63px,-75px,0);">      
+      </div>
+      <div>
+        <h1><span class="w3-xlarge margin-top">Captain:</span></h1>
+        <h2><span class="w3-xlarge margin-top">Holland Ernst</span></h2>
+        <p>Holland Ernst is the Captain and Co-Founder of Longhorn Neurotech. He is a apart of the class of 2025 studying biomedical engineering and planning to pursue a Master's BME with a specification in neural engineering. His mission is to bridge the gap between the brain and the vast world around us. Being part of Longhorn Neurotech and collaborating with such remarkably talented and diverse individuals not only excites him but also drives him forward in the pursuit of a career in neural engineering and BCI.</p>
+      </div>
+      <div class="text">
+        <a href="https://www.linkedin.com/in/holland-ernst/" target="_blank">
+          <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leadership Team -->
+  <div class="content">
+    <h2 class="margin-top">Leadership Team</h2>
+    <hr style="width:255px" class="w3-opacity">
+    
+    <div class="row-padding">
+      <!-- Left Column -->
+      <div class="half">
+        <!-- Julian Weaver - R&D Lead -->
+        <div class="card">
+          <div class="pfp-circle margin-right w3-left">
+            <img src="julian-weaver.jpeg" alt="Julian Weaver" class="pfp" style="transform: translate3d(0px,-20px,0)">
+          </div>
+          <p><span class="w3-xlarge">R&D Lead:</span></p>
+          <p><span class="w3-xlarge">Julian Weaver</span></p>
+          <p class="margin-bottom2">Julian Weaver is a apart of the class of 2025 and is a double major in Neuroscience and Computer Science, with a minor in Business. A founding member of the DMIC lab's neuro team, he plans to pursue a PhD focused on neuroimaging and invasive brain-computer interfaces. In his free time, he enjoys producing music and rock climbing.</p>
+          <div class="text">
+            <a href="https://www.linkedin.com/in/julian-weaver" target="_blank">
+              <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tony Chae - VP of Outreach -->
+        <div class="card">
+          <div class="pfp-circle margin-right w3-left">
+            <img src="tony_chae.jpg" alt="Tony Chae" class="pfp" style="transform: translate3d(0,22.5px,0) scale(1.6);">
+          </div>
+          <p><span class="w3-xlarge margin-bottom">VP of Outreach:</span></p>
+          <p><span class="w3-xlarge margin-bottom">Tony Chae</span></p>
+          <p class="margin-bottom2">Tony Chae is a part of the class of 2025 studying Electrical and Computer Engineering student with a minor in Philosophy interested in brains, minds and machines. In his free time, Tony practices meditation, enjoys reading, cooking, working out (including ice skating, Brazilian Jiu-Jitsu, and running), photography, and exploring nature.</p>
+          <div class="text">
+            <a href="https://www.linkedin.com/in/tony-chae-3bb600249/" target="_blank">
+              <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Debarghya Chaki - VP of Finance -->
+        <div class="card">
+          <div class="pfp-circle margin-right w3-left">
+            <img src="pfp.png" alt="VP of Finance" class="w3-left pfp margin-right">
+          </div>
+          <p><span class="w3-large">VP of Finance:</span></p>
+          <p><span class="w3-large">Debarghya Chaki</span></p>
+          <p class="margin-bottom2">Debarghya is a part of the class of 2026 studying Biomedical Engineering and also pursuing Computational Science and Engineering as well as Scientific Computation and Data Sciences. He works in the Dynamic Medical Engineering and Computing lab, with projects including machine learning based segmentation of echocardiograms and Identification of biomechanical material parameters of lung tissue derived from CT. He enjoys working and volunteering as an EMT as well as reading.</p>
+          <div class="text">
+            <a href="https://www.linkedin.com/in/dchaki/" target="_blank">
+              <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="half">
+        <!-- Alan Fletcher - Hardware Lead -->
+        <div class="card">
+          <div class="pfp-circle margin-right w3-left">
+            <img src="Alan Fletcher.jpg" alt="Alan Fletcher" class="w3-left pfp margin-right" style="transform: translate3d(0px,-40px,0)">
+          </div>
+          <p><span class="w3-xlarge margin-bottom">Hardware Lead:</span></p>
+          <p><span class="w3-xlarge margin-bottom">Alan Fletcher</span></p>
+          <p class="margin-bottom2">Alan Fletcher is a part of the class of 2025 studying BME and is a member of the Longhorn Band. His prospective career is in clinical prosthetics/orthotics and is currently doing research in Dr. Fey's Systems for Augmenting Human Mechanics Lab.</p>
+          <div class="text">
+            <a href="https://www.linkedin.com/in/alan-fletcher01" target="_blank">
+              <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Nathan Feldt - Software Lead -->
+        <div class="card">
+          <div class="pfp-circle margin-right w3-left">
+            <img src="Nathan_Feldt.JPG" alt="Nathan Feldt" class="w3-left pfp margin-right" style="transform: translate3d(0px,10px,0) scale(1.3)">
+          </div>
+          <p><span class="w3-xlarge margin-bottom">Software Lead:</span></p>
+          <p><span class="w3-xlarge margin-bottom">Nathan Feldt</span></p>
+          <p class="margin-bottom2">Nathan Feldt is a apart of the class of 2025 and is a Neuroscience and Math double Major. He is originally from Seattle but Austin is his second home. He loves to Golf, watch Texas Football, and do all things Neuroscience.</p>
+          <div class="text">
+            <a href="https://www.linkedin.com/in/nathan-feldt-1b6573229/" target="_blank">
+              <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- VP of Membership -->
+        <div class="card">
+          <div class="pfp-circle margin-right w3-left">
+            <img src="pfp.png" alt="VP of Membership" class="pfp">
+          </div>
+          <p><span class="w3-xlarge">VP of Membership:</span></p>
+          <p><span class="w3-xlarge">Jay Damodaran</span></p>
+          <p class="margin-bottom2">Jay Damodaran is a part of the class of 2027 and is studying biomedical engineering student with a minor in CS. He loves science and biology, and believes that neurotech provides a great opportunity to explore their intersection. He hopes to pursue a career as a data scientist, focused on analyzing biomedical datasets. In his free time, he likes to cook and go to the gym.</p>
+          <div class="text">
+            <a href="#" target="_blank">
+              <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Vivek Beeram - Machine Learning Specialist -->
+        <div class="card">
+          <div class="pfp-circle margin-right w3-left">
+            <img src="Vivek-Beeram.jpg" alt="Vivek Beeram" class="pfp">
+          </div>
+          <p><span class="w3-xlarge">Machine Learning Specialist:</span></p>
+          <p><span class="w3-xlarge">Vivek Beeram</span></p>
+          <p class="margin-bottom2">Vivek Beeram is a part of the class of 2025 studying neuroscience/Plan II and is interested in neural evolution and neural network architecture. He is excited to start building with this team and taking on cutting-edge BCI challenges. He enjoys climbing, exploring nature, and playing chess.</p>
+          <div class="text">
+            <a href="https://www.linkedin.com/in/vivek-beeram-370852212" target="_blank">
+              <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
 <footer class="end">
-    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center">Contact</h2><br>
-  
-    <aside class="footer-left w3-hover-opacity">
-      <i class="fa fa-envelope w3-xlarge "></i>
-      <a href="mailto:lhneurotech@gmail.com">
-      lhneurotech@gmail.com</a>
-    </aside>
-  
-    <aside class="footer-right">
-        <a href="https://linktr.ee/lhneurotech">
-            <img src="linktree-logo-icon.svg" class="w3-hover-opacity" width="5%">
-        </a>
-    </aside>
-  
-    <aside class="footer-center">
-      <a href="https://www.linkedin.com/company/lhneurotech/about/">
-        <i class="fa fa-linkedin fa-2x w3-hover-opacity "></i>  
-        </a>
-    </aside>
-  </footer>
+  <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center">Contact</h2><br>
+
+  <aside class="footer-left w3-hover-opacity">
+    <i class="fa fa-envelope w3-xlarge"></i>
+    <a href="mailto:lhneurotech@gmail.com">lhneurotech@gmail.com</a>
+  </aside>
+
+  <aside class="footer-right">
+    <a href="https://linktr.ee/lhneurotech">
+      <img src="linktree-logo-icon.svg" class="w3-hover-opacity" width="5%">
+    </a>
+  </aside>
+
+  <aside class="footer-center">
+    <a href="https://www.linkedin.com/company/lhneurotech/about/">
+      <i class="fa fa-linkedin fa-2x w3-hover-opacity"></i>
+    </a>
+  </aside>
+</footer>
+
+<script>
+// Mobile menu toggle
+document.querySelector('.mobile-menu button').addEventListener('click', function() {
+  const dropdownContent = this.nextElementSibling;
+  dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+});
+</script>
 
 </body>
 </html>
