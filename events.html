@@ -409,25 +409,42 @@ h1 {
 </head>
 <body>
 
-<!-- Fixed Navigation -->
-<nav class="navbar">
-  <a href="index.html" class="logo-link">
-    <img src="longhorn.png" alt="Longhorn NeuroTech Logo" class="logo-image">
-  </a>
-  
-  <div class="nav-links">
-    <a href="about.html" class="nav-button">About Us</a>
-    <a href="events.html" class="nav-button">Projects & Events</a>
-  </div>
+<!-- Navbar (sit on top) -->
+<div class="top">
+  <div class="bar w3-white wide top-card">
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right option1">
+      <a href="index.html" class="logo">
+        <img src="main.jpg" alt="Logo" style="width: 170px;">
+      </a>
+      <a href="index.html" class="w3-bar-item button">Home</a>
+      <!--<a href="#contact" class="w3-bar-item button">Projects</a>-->
+      <a href="events.html" class="w3-bar-item button">Events</a>
+      <a href="about.html" class="w3-bar-item button">About Us</a>
+      <!--<div class="InfoDropdown"> -->
+      <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">More Info</a>
+      <!--> <div class="InfoDropdown-content"> -->
+      <a href="resources.html" class="w3-bar-item button">Resources</a>
 
-  <div class="mobile-menu">
-    <button class="nav-button">☰</button>
-    <div class="dropdown-content">
-      <a href="about.html" class="nav-button">About Us</a>
-      <a href="events.html" class="nav-button">Projects & Events</a>
+      </div>
+    </div>
+      <a href="login.html" class="w3-bar-item button" >Member Login</a>
+    </div>
+    <div class="option2">
+      <div class="dropdown">
+        <button class="dropbtn"><span class="w3-xlarge">&#9776;</span></button>
+        <div class="dropdown-content">
+          <a href="index.html" class="w3-bar-item button">Home</a>
+          <a href="about.html" class="w3-bar-item button">About Us</a>
+          <a href="events.html" class="w3-bar-item button">Events</a>      
+          <a href="https://linktr.ee/lhneurotech" class="w3-bar-item button">More Info</a>
+          <!--<a href="resources.html" class="w3-bar-item button">Resources</a>-->
+          <a href="login.html" class="w3-bar-item button">Member Login</a>
+        </div>
+      </div>
     </div>
   </div>
-</nav>
+</div>
 
 <div class="padding">
 
