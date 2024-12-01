@@ -1,0 +1,9 @@
+.half{
+    display: inline-block;
+    width: 50%;
+    padding: 0 15px;
+}
+
+.about-title{
+    font-size: 30px;
+}

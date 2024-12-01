@@ -1,0 +1,117 @@
+/* Base styles */
+body {
+  margin: 0;
+  padding-top: 80px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* About Section Styles */
+#about h3 {
+    font-size: 56px;
+    background: transparent;
+    vertical-align: baseline;
+    text-align: center;
+    color: #FFEBAD;
+  }
+
+  #about {
+    max-width: 1200px; /* Restricts the width */
+    margin: 0 auto; /* Centers the div */
+    padding: 32px; /* Adds internal space */
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    width: 100%;
+    position: relative;
+    margin-top: 4rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .partners-section {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #333;
+    margin-top: 2rem;
+  }
+  
+  .partners-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .partner-logo {
+    max-width: 200px;
+    height: auto;
+    margin: 0 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .mobile-menu {
+      display: block;
+    }
+  
+    .half {
+      width: 100%;
+      padding: 0 10px;
+    }
+  
+    .row-padding {
+      margin: 0;
+      flex-direction: column;
+    }
+  
+    .w3-container {
+      padding: 32px 24px;
+    }
+  
+    #officers {
+      padding: 0 24px;
+    }
+  
+    .partners-grid {
+      flex-direction: column;
+    }
+  
+    .partner-logo {
+      margin: 20px 0;
+    }
+  
+    .pfp-circle {
+      margin: 0 auto 20px;
+    }
+  
+    .card {
+      text-align: center;
+    }
+  }
