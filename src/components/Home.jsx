@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SponsorsWidget from "./SponsorWidget";
 import CarouselComponent from "./Carousel.jsx";
-import labImage from "/src/assets/lab.jpg";
+import labImage from "/assets/lab.jpg";
 import styles from './page.module.css';
 
 const Home = () => {
@@ -86,7 +86,7 @@ const Home = () => {
               playsInline
               className="w-full h-full object-cover"
             >
-              <source src="./src/assets/nature.mp4" type="video/mp4"/>
+              <source src="/assets/nature.mp4" type="video/mp4"/>
             </video>
           </div>
         </div>
@@ -108,7 +108,7 @@ const Home = () => {
               playsInline
               className="h-full w-full object-cover"
             >
-              <source src="./src/assets/nature.mp4" type="video/mp4" />
+              <source src="/assets/nature.mp4" type="video/mp4" />
             </video>
             {/* Overlay gradients */}
             <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-50" />
