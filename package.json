@@ -7,11 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.11.17",
+    "gh-pages": "^6.2.0",
     "lucide-react": "^0.456.0",
     "prop-types": "^15.8.1",
     "pure-react-carousel": "^1.32.0",
