@@ -39,7 +39,7 @@ const eventsData = [
             False memory implantation, and Brain Organoids and Human-AI co-evolution. Please make a registration at
             this link https://form.jotform.com/243048038506151 and join us at 7:00 PM - 9:00 PM at the scheduled date!`,
         type: `Guest Speaker Talks`,
-        image: "/src/assets/events/Longhorn Neurotech + Synapse Guest Speaker Panel.png",
+        image: "/assets/events/Longhorn Neurotech + Synapse Guest Speaker Panel.png",
     },
 
 
@@ -50,7 +50,7 @@ const eventsData = [
         location: "Online on Zoom",
         details: `Join us for a completely online guest speaker session starring Dr. Scott Wood from NASA Johnson Space center!`,
         type: `Guest Speaker Talks`,
-        image: "src/assets/events/Guest Speaker with Dr. Scott Wood.png",
+        image: "/assets/events/Guest Speaker with Dr. Scott Wood.png",
     },
 
     {
@@ -63,7 +63,7 @@ const eventsData = [
             All are welcome, no RSVP or anything. Our very own Tony Chae will also host their Journal Club presentation in
             this general meeting too!`,
         type: `General Meeting`,
-        image: "/src/assets/events/General Meeting with Dr. Jose Del R. Milan.png",
+        image: "/assets/events/General Meeting with Dr. Jose Del R. Milan.png",
     },
 
     {
@@ -75,7 +75,7 @@ const eventsData = [
             the scheduled date and location! Learn more about the various opportunties and projects Longhorn Neurotech
             will provide this year!`,
         type: `General Meeting`,
-        image: "/src/assets/events/LHNT First General Meeting.png",
+        image: "/assets/events/LHNT First General Meeting.png",
     },
 
     {
@@ -85,7 +85,7 @@ const eventsData = [
         location: "EER Stairway",
         details: `Legendary group photo of all Longhorn Neurotech's 2024-2025 project members!`,
         type: `Project Meeting`,
-        image: "/src/assets/lab.jpg",
+        image: "/assets/lab.jpg",
     },
 
     {
@@ -98,7 +98,7 @@ const eventsData = [
             A legendary opportunity for our members to learn directly from a leading expert on the past,
             present, and future development of brain-computer interface technology!`,
         type: `Guest Speaker Talks`,
-        image: "/src/assets/DrJordan.jpg"
+        image: "/assets/DrJordan.jpg"
     }
 
 ];
