@@ -9,14 +9,14 @@ const SponsorsWidget = () => {
         {/* Replace these divs with sponsor images */}
         <Link to="https://santacruzlab.org/" className="h-32 w-64">
           <img
-            src="src/assets/scl.png"
+            src="./src/assets/scl.png"
             alt="Santa Cruz Lab"
             className="h-full w-full object-contain max-sm:h-16 max-sm:w-32"
           />
         </Link>
         <Link to="https://cockrell.utexas.edu/" className="w-1/4 mt-10 ">
           <img
-            src="src/assets/cse.svg"
+            src="./src/assets/cse.svg"
             alt="Crockell School of Engineering"
             className="w-full object-contain max-sm:h-16 max-sm:w-32 "
           />
@@ -26,7 +26,7 @@ const SponsorsWidget = () => {
           className="w-1/6 mt-10  max-sm:h-8 max-sm:w-16"
         >
           <img
-            src="src/assets/ntx.png"
+            src="./src/assets/ntx.png"
             alt="NeuroTechX"
             className="w-full object-contain max-sm:h-16 max-sm:w-32"
           />
@@ -36,7 +36,7 @@ const SponsorsWidget = () => {
           className="w-1/12 mt-10  max-sm:h-8 max-sm:w-16"
         >
           <img
-            src="src/assets/tiw.svg"
+            src="./src/assets/tiw.svg"
             alt="Texas InventionWorks"
             className="w-full object-contain max-sm:h-16 max-sm:w-32"
           />
