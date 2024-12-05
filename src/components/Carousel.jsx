@@ -10,19 +10,19 @@ const CarouselComponent = () => {
     {
       type: 'videoLink',
       url: 'https://youtu.be/zHFV1OunXrM?feature=shared',
-      thumbnail: '/src/assets/BCIpong.jpg',
+      thumbnail: './src/assets/BCIpong.jpg',
       title: 'Neural Engineering',
       description: 'Advancing the frontiers of brain-computer interfaces'
     },
     {
       type: 'image',
-      src: '/src/assets/Slide2.jpg',
+      src: './src/assets/Slide2.jpg',
       title: 'Student Competition',
       description: 'Participate in the NeuroTechX international competition'
     },
     {
       type: 'image',
-      src: '/src/assets/DrJordan.jpg',
+      src: './src/assets/DrJordan.jpg',
       title: 'Join Our Community',
       description: 'Connect with professionals and like-minded peers'
     }

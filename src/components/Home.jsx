@@ -86,7 +86,7 @@ const Home = () => {
               playsInline
               className="w-full h-full object-cover"
             >
-              <source src="/src/assets/nature.mp4" type="video/mp4"/>
+              <source src="./src/assets/nature.mp4" type="video/mp4"/>
             </video>
           </div>
         </div>
@@ -108,7 +108,7 @@ const Home = () => {
               playsInline
               className="h-full w-full object-cover"
             >
-              <source src="/src/assets/nature.mp4" type="video/mp4" />
+              <source src="./src/assets/nature.mp4" type="video/mp4" />
             </video>
             {/* Overlay gradients */}
             <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-50" />
