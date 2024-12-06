@@ -19,10 +19,14 @@ const Events = () => {
                 const response = await fetch(
                     `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink&access_token=${INSTAGRAM_TOKEN}`
                 );
+
+                console.log("Got a response from the API! Need to check if this response is OK!");
                 
                 if (!response.ok) {
                     throw new Error('Failed to fetch Instagram posts');
                 }
+
+                console.log("Data received is OK! Time to convert data into JSON format!");
                 
                 const data = await response.json();
                 console.log('Instagram data:', data); // For debugging
