@@ -18,7 +18,7 @@ const LeadershipTeam = () => {
           Debarghya is a part of the class of 2026 studying Biomedical Engineering and also pursuing Computational Science and Engineering as well as Scientific Computation and Data Sciences. He works in the Dynamic Medical Engineering and Computing lab, with projects including machine learning based segmentation of echocardiograms and Identification of biomechanical material parameters of lung tissue derived from CT. He enjoys working and volunteering as an EMT as well as reading.
         </ContactCard>
         <ContactCard name="Tarun Dasari" title="VP of Operations" img="/OfficerImages/Tarun_Desari.jpg" styleClass="pfp tarun" linkedin="https://www.linkedin.com/in/tsdasari/">
-          Placeholder text
+        As Vice President of Operations, Tarun plays a pivotal role in driving the organization’s operational success. With a focus on efficiency, innovation, and strategic alignment, Tarun oversees day-to-day operations, ensuring that all processes are optimized to meet the organization’s goals.
         </ContactCard>
       </div>
 
