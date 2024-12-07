@@ -8,8 +8,8 @@ const ContactCard = ({ name, title, img, styleClass, linkedin, children }) => {
         <img src={img} alt={`${img}`} className={styleClass} />
       </div>
       <div>
-        <h1 className="w3-xlarge margin-top">{title}:</h1>
-        <h2 className="w3-xlarge margin-top">{name}</h2>
+        <h2 className=" margin-top">{title}:</h2>
+        <h2 className="w3-xlarge margin-top"><b>{name}</b></h2>
         <div className="margin-bottom2">{children}</div>
       </div>
       <div class="text">
