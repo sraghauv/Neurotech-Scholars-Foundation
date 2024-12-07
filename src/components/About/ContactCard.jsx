@@ -14,7 +14,7 @@ const ContactCard = ({ name, title, img, styleClass, linkedin, children }) => {
       </div>
       <div class="text">
         <a href={linkedin} target="_blank">
-          <i class="fa fa-linkedin fa-3x w3-hover-opacity"></i>
+          <i class="fa fa-linkedin fa-4x w3-hover-opacity"></i>
         </a>
       </div> 
     </div>
