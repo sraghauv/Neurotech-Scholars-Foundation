@@ -7,11 +7,6 @@
   flex: 1; /* Each column takes up equal width */
 }
 
-.contact {
-  padding: 10px; /* Optional padding for the content */
-  background-color: #f1f1f1; /* Example background */
-}
-
 @media (max-width: 768px) { /* When screen width is 768px or smaller */
   .container {
     flex-direction: column; /* Stack columns vertically */
