@@ -179,15 +179,15 @@ const Home = () => {
         </div>
 
         {/* Mission Section */}
-        <div className="bg-orange-100 py-20 px-4 md:px-8">
+        <div className="bg-[#598BBC] py-20 px-4 md:px-8">
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: '40%' }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 0.8 }}
             className="max-w-7xl mx-auto"
           >
-            <h2 className="text-5xl font-['Antonio'] text-[#BF5801] mb-12 text-center">
 
+            <h2 className="text-5xl font-['Antonio'] text-[#BF5801] mb-12 text-center">
               Our Mission
             </h2>
             <p className="text-lg bg-white p-6 rounded-2xl shadow-lg max-w-4xl mx-auto">
