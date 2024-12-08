@@ -17,7 +17,7 @@ const Event = ({ event }) => {
     const placeholderImage = "https://via.placeholder.com/150";
 
     return (
-        <div style={{height: '60em'}} className="event-card border p-4 pb-1 rounded-xl shadow-sm bg-white mb-1">
+        <div style={{minHeight: '50em'}} className="event-card border p-4 pb-1 rounded-xl shadow-sm bg-white mb-1">
             <span style={{fontFamily: "Antonio", backgroundColor: VANILLA}} className="event-type badge mt-0.5 mb-4 text-base text-black">{type}</span>
             <img 
                 src={image || placeholderImage} 

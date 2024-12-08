@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import eventsData from './Events/eventsData';
 import { EventsDisplay, Filter } from './Events/events';
 import SponsorWidget from './SponsorWidget';
-import {SILVER_LAKE_BLUE, PRUSSIAN_BLUE, LIGHT_CREAM} from './Events/colors.js';
+import {PRUSSIAN_BLUE, LIGHT_CREAM, VANILLA} from './Events/colors.js';
 
 const Events = () => {
     const [filter, setFilter] = useState('all');
@@ -71,7 +71,7 @@ const Events = () => {
     return (
         <>
             <div style={{backgroundColor: PRUSSIAN_BLUE}} className="min-h-screen pt-10 pb-4">
-                <h1 style={{color: SILVER_LAKE_BLUE, fontFamily: "Heading"}} className="text-4xl font-bold text-center pt-3">
+                <h1 style={{color: VANILLA, fontFamily: "Heading"}} className="text-4xl font-bold text-center pt-3">
                     See what Longhorn Neurotech is Up To!
                 </h1>
 
