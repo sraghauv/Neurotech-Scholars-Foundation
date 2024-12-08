@@ -69,13 +69,13 @@ const Events = () => {
 
     return (
         <>
-            <div style={{backgroundColor: `#BF5801`}} className="min-h-screen pt-20 pb-4">
+            <div style={{backgroundColor: `#BF5801`}} className="min-h-screen pt-10 pb-4">
                 <h1 style={{color: `#FFF8D6`}} className="text-4xl font-bold text-center pt-3">
                     See what Longhorn Neurotech is Up To!
                 </h1>
 
                 {/* Instagram Feed Section */}
-                <div className="max-w-[1400px] mx-auto px-4 my-8">
+                <div className="max-w-[1400px] mx-auto px-4 my-8 hidden">
                     <h2 style={{color: `#FFF8D6`}} className="text-3xl font-bold mb-4">Recent News</h2>
                     <div className="bg-white rounded-lg p-6 overflow-hidden min-h-[400px]">
                         {isLoading ? (
@@ -124,7 +124,7 @@ const Events = () => {
                 </div>
 
                 {/* Events Section */}
-                <div className="flex flex-col items-center max-w-[1400px] mx-auto px-4">
+                <div className="flex flex-col items-center max-w-[1400px] mx-auto my-8 px-4">
                     <div className="flex flex-row items-center justify-between w-full mb-4">
                         <h2 style={{color: `#FFF8D6`}} className="text-3xl font-bold">Events</h2>
                         <Filter setFilter={setFilter} />
