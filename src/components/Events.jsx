@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import eventsData from './Events/eventsData';
 import { EventsDisplay, Filter } from './Events/events';
 import SponsorWidget from './SponsorWidget';
+import {SILVER_LAKE_BLUE, PRUSSIAN_BLUE, LIGHT_CREAM} from './Events/colors.js';
 
 const Events = () => {
     const [filter, setFilter] = useState('all');
@@ -69,8 +70,8 @@ const Events = () => {
 
     return (
         <>
-            <div style={{backgroundColor: `#BF5801`}} className="min-h-screen pt-10 pb-4">
-                <h1 style={{color: `#FFF8D6`}} className="text-4xl font-bold text-center pt-3">
+            <div style={{backgroundColor: PRUSSIAN_BLUE}} className="min-h-screen pt-10 pb-4">
+                <h1 style={{color: SILVER_LAKE_BLUE}} className="text-4xl font-bold text-center pt-3">
                     See what Longhorn Neurotech is Up To!
                 </h1>
 
@@ -126,8 +127,8 @@ const Events = () => {
                 {/* Events Section */}
                 <div className="flex flex-col items-center max-w-[1400px] mx-auto my-8 px-4">
                     <div className="flex flex-row items-center justify-between w-full mb-4">
-                        <h2 style={{color: `#FFF8D6`}} className="text-3xl font-bold">Events</h2>
-                        <Filter setFilter={setFilter} />
+                        <h2 style={{color: LIGHT_CREAM}} className="text-3xl font-bold">Events</h2>
+                        <Filter className="bg-[#F3E5AB]" setFilter={setFilter} />
                     </div>
                     <EventsDisplay events={filteredEvents} />
                 </div>
