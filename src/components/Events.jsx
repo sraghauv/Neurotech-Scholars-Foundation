@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import eventsData from './Events/eventsData';
 import { EventsDisplay, Filter } from './Events/events';
 import SponsorWidget from './SponsorWidget';
-import {PRUSSIAN_BLUE, LIGHT_CREAM, VANILLA} from './Events/colors.js';
+import {PRUSSIAN_BLUE, VANILLA, BONE_WHITE} from './Events/colors.js';
 
 const Events = () => {
     const [filter, setFilter] = useState('all');
@@ -77,7 +77,7 @@ const Events = () => {
 
                 {/* Instagram Feed Section */}
                 <div className="max-w-[1400px] mx-auto px-4 my-8 hidden">
-                    <h2 style={{color: LIGHT_CREAM}} className="text-4xl font-bold mb-4 subheading">Recent News</h2>
+                    <h2 style={{color: BONE_WHITE}} className="text-4xl font-bold mb-4 subheading">Recent News</h2>
                     <div className="bg-white rounded-lg p-6 overflow-hidden min-h-[400px]">
                         {isLoading ? (
                             <div className="flex justify-center items-center h-[300px]">
@@ -127,7 +127,7 @@ const Events = () => {
                 {/* Events Section */}
                 <div className="flex flex-col items-center max-w-[1400px] mx-auto my-8 px-4">
                     <div className="flex flex-row items-center justify-between w-full mb-4">
-                        <h2 style={{color: LIGHT_CREAM}} className="text-4xl font-bold subheading">Events</h2>
+                        <h2 style={{color: BONE_WHITE}} className="text-5xl font-bold subheading">Events</h2>
                         <Filter setFilter={setFilter} />
                     </div>
                     <EventsDisplay events={filteredEvents} />
