@@ -26,7 +26,7 @@
     
 */
 
-const eventsData = [
+const events = [
 
     {
         id: 1,
@@ -102,5 +102,7 @@ const eventsData = [
     }
 
 ];
+
+const eventsData =  events.slice().sort((a, b) => b.date - a.date);
 
 export default eventsData;
