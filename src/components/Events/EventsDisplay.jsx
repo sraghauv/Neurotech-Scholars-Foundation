@@ -15,7 +15,7 @@ const EventsDisplay = ({ events }) => {
   }
 
   return (
-    <div className="events-grid grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 w-[90%]">
+    <div className="events-grid grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
       {events.map((event) => (
         <Event key={event.id} event={event} />
       ))}
