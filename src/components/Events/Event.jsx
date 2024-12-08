@@ -1,5 +1,6 @@
 // Event component for the Events page
 import PropTypes from 'prop-types';
+import {PRUSSIAN_BLUE} from './colors.js';
 
 /* 
     Takes in all properties of event and returns 
@@ -22,8 +23,8 @@ const Event = ({ event }) => {
                 alt={`${name} image`} 
                 className="event-image w-full h-50 object-contain rounded mb-4" 
             />
-            <div className="flex flex-col flex-wrap flex-auto">
-                <h2 className="text-2xl font-bold mb-2">{name}</h2>
+            <div style={{fontFamily: "Antonio"}} className="flex flex-col flex-wrap flex-auto">
+                <h2 style={{color: PRUSSIAN_BLUE}} className="text-2xl font-bold mb-2">{name}</h2>
                 <p className="mb-2 text-base">{details}</p>
                 <p className="text-lg"><strong>Date:</strong> {new Date(date).toLocaleDateString()}</p>
                 {location && <p className="text-lg"><strong>Location:</strong> {location}</p>} {/* Only display location if provided */}
