@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "/assets/Picture1.png";
+import Logo from "/assets/head purssian blue.svg";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -30,20 +30,20 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-4">
             <Link
               to="/about"
-              className="text-2xl px-4 py-2 rounded-md hover:bg-[#FFEBAD] hover:bg-opacity-75 transition-colors duration-200"
+              className="text-2xl text-[#213C58] font-['Antonio'] px-4 py-2 rounded-md hover:bg-[#FFEBAD] hover:bg-opacity-75 hover:text-[#598BBC] transition-colors duration-200"
             >
               About Us
             </Link>
 
             <Link
               to="/events"
-              className="text-2xl px-4 py-2 rounded-md hover:bg-[#FFEBAD] hover:bg-opacity-75 transition-colors duration-200"
+              className="text-2xl text-[#213C58] font-['Antonio'] px-4 py-2 rounded-md hover:bg-[#FFEBAD] hover:bg-opacity-75 hover:text-[#598BBC]  transition-colors duration-200"
             >
               Events
             </Link>
             <Link
               to="/contact"
-              className="text-2xl px-4 py-2 rounded-md hover:bg-[#FFEBAD] hover:bg-opacity-75 transition-colors duration-200"
+              className="text-2xl  text-[#213C58] font-['Antonio'] px-4 py-2 rounded-md hover:bg-[#FFEBAD] hover:bg-opacity-75 hover:text-[#598BBC] transition-colors duration-200"
             >
               Contact
             </Link>
