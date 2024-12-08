@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "/assets/head purssian blue.svg";
+import Logo from "/assets/cow purssian blue.svg";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full h-20 border-b-2 bg-white border-gray-200 text-[#598BBC] font-['Anton'] shadow-md fixed top-0 left-0 z-50">
+    <nav className="w-full h-20 border-b-2 bg-white border-gray-200 text-[#598BBC] font-['Antonio'] shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto px-4 h-full">
         <div className="flex justify-between items-center h-full">
           {/* Logo/Home Link */}
@@ -21,7 +21,7 @@ const Navbar = () => {
           >
             <img
               src={Logo}
-              className="w-24 h-auto"
+              className="w-24 h-auto p-2"
               alt="Longhorn Neurotech Logo"
             />
           </Link>
