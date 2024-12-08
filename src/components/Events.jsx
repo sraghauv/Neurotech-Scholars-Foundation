@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import eventsData from './Events/eventsData';
 import { EventsDisplay, Filter } from './Events/events';
 import SponsorWidget from './SponsorWidget';
+import {PRUSSIAN_BLUE, VANILLA, BONE_WHITE} from './Events/colors.js';
 
 const Events = () => {
     const [filter, setFilter] = useState('all');
@@ -19,10 +20,14 @@ const Events = () => {
                 const response = await fetch(
                     `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink&access_token=${INSTAGRAM_TOKEN}`
                 );
+
+                console.log("Got a response from the API! Need to check if this response is OK!");
                 
                 if (!response.ok) {
                     throw new Error('Failed to fetch Instagram posts');
                 }
+
+                console.log("Data received is OK! Time to convert data into JSON format!");
                 
                 const data = await response.json();
                 console.log('Instagram data:', data); // For debugging
@@ -65,14 +70,14 @@ const Events = () => {
 
     return (
         <>
-            <div style={{backgroundColor: `#BF5801`}} className="min-h-screen pt-20 pb-4">
-                <h1 style={{color: `#FFF8D6`}} className="text-4xl font-bold text-center pt-3">
+            <div style={{backgroundColor: PRUSSIAN_BLUE}} className="min-h-screen pt-10 pb-4">
+                <h1 style={{color: VANILLA, lineHeight: "125%", letterSpacing: "0.02em"}} className="text-6xl font-bold text-center pt-3 heading">
                     See what Longhorn Neurotech is Up To!
                 </h1>
 
                 {/* Instagram Feed Section */}
-                <div className="max-w-[1400px] mx-auto px-4 my-8">
-                    <h2 style={{color: `#FFF8D6`}} className="text-3xl font-bold mb-4">Recent News</h2>
+                <div className="max-w-[1400px] mx-auto px-4 my-8 hidden">
+                    <h2 style={{color: BONE_WHITE}} className="text-4xl font-bold mb-4 subheading">Recent News</h2>
                     <div className="bg-white rounded-lg p-6 overflow-hidden min-h-[400px]">
                         {isLoading ? (
                             <div className="flex justify-center items-center h-[300px]">
@@ -120,9 +125,9 @@ const Events = () => {
                 </div>
 
                 {/* Events Section */}
-                <div className="flex flex-col items-center max-w-[1400px] mx-auto px-4">
+                <div className="flex flex-col items-center max-w-[1400px] mx-auto my-8 px-4">
                     <div className="flex flex-row items-center justify-between w-full mb-4">
-                        <h2 style={{color: `#FFF8D6`}} className="text-3xl font-bold">Events</h2>
+                        <h2 style={{color: BONE_WHITE}} className="text-5xl font-bold subheading">Events</h2>
                         <Filter setFilter={setFilter} />
                     </div>
                     <EventsDisplay events={filteredEvents} />

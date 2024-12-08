@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Antonio font for headings */
+.heading{
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700; 
+}
+
+/* Antonio font for subheadings */
+.subheading{
+    font-family: 'Antonio', sans-serif;
+    font-weight: 600;
+}
+
+/* Antonio font for regular text */
+.baseText{
+    font-family: 'Antonio', sans-serif;
+    font-weight: 400;
+}

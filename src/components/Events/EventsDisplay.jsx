@@ -11,11 +11,20 @@ const EventsDisplay = ({ events }) => {
   console.log('Events received in EventsDisplay:', events);
 
   if (!events || events.length === 0) {
-    return <p style={{color: '#FFF8D6'}} className="flex flex-wrap text-3xl font-bold p-4 w-[90%] justify-center text-center">We couldn’t find any events matching for your search. Don’t worry — new events are added regularly, so check again soon!</p>   
+    return <p 
+        style={{
+          color: '#FFF8D6', 
+          lineHeight: "125%", 
+          letterSpacing: "0.02em"
+        }} 
+        className="flex flex-wrap text-3xl font-bold p-4 w-[90%] justify-center text-center baseText"
+      >
+        We couldn’t find any events matching for your search. Don’t worry — new events are added regularly, so check again soon!
+      </p>   
   }
 
   return (
-    <div className="events-grid grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 w-[90%]">
+    <div className="events-grid grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
       {events.map((event) => (
         <Event key={event.id} event={event} />
       ))}

@@ -26,7 +26,7 @@
     
 */
 
-const eventsData = [
+const events = [
 
     {
         id: 1,
@@ -36,8 +36,8 @@ const eventsData = [
         details: `This forum will feature seven interdisciplinary panels led by esteemed professors 
             from neuroscience, computer science, philosophy, physics, arts, and medical fields! There will
             be thought-provoking discussions on Brain hacking & Ethics, Direct brain-to-brain communication, 
-            False memory implantation, and Brain Organoids and Human-AI co-evolution. Please make a registration at
-            this link https://form.jotform.com/243048038506151 and join us at 7:00 PM - 9:00 PM at the scheduled date!`,
+            False memory implantation, and Brain Organoids and Human-AI co-evolution. Please join us at 7:00 PM 
+            - 9:00 PM at the scheduled date!`,
         type: `Guest Speaker Talks`,
         image: "/assets/events/Longhorn Neurotech + Synapse Guest Speaker Panel.png",
     },
@@ -102,5 +102,7 @@ const eventsData = [
     }
 
 ];
+
+const eventsData =  events.slice().sort((a, b) => b.date - a.date);
 
 export default eventsData;

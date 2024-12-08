@@ -187,6 +187,7 @@ const Home = () => {
             className="max-w-7xl mx-auto"
           >
             <h2 className="text-5xl font-['Antonio'] text-[#BF5801] mb-12 text-center">
+
               Our Mission
             </h2>
             <p className="text-lg bg-white p-6 rounded-2xl shadow-lg max-w-4xl mx-auto">
