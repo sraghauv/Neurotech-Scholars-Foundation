@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const SponsorsWidget = () => {
   return (
     <div className="bg-black w-full py-8 flex flex-col items-center text-white">
-      <h2 className="text-4xl text-[#FFEBAD] font-['Anton']">Sponsors</h2>
-      <div className="md:flex max-sm:grid-cols- max-sm: justify-center gap-20 mt-4 ">
+      <h2 className="text-4xl text-[#598BBC] font-['Antonio']">Sponsors</h2>
+      <div className="md:flex max-sm:grid-cols- max-sm: justify-center gap-20 mt-4 px-4">
         {/* Replace these divs with sponsor images */}
         <Link to="https://santacruzlab.org/" className="h-32 w-64">
           <img
