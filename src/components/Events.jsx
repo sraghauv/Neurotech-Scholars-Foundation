@@ -71,13 +71,13 @@ const Events = () => {
     return (
         <>
             <div style={{backgroundColor: PRUSSIAN_BLUE}} className="min-h-screen pt-10 pb-4">
-                <h1 style={{color: VANILLA, fontFamily: "Heading"}} className="text-4xl font-bold text-center pt-3">
+                <h1 style={{color: VANILLA}} className="text-4xl font-bold text-center pt-3 heading">
                     See what Longhorn Neurotech is Up To!
                 </h1>
 
                 {/* Instagram Feed Section */}
                 <div className="max-w-[1400px] mx-auto px-4 my-8 hidden">
-                    <h2 style={{color: LIGHT_CREAM}} className="text-3xl font-bold mb-4">Recent News</h2>
+                    <h2 style={{color: LIGHT_CREAM}} className="text-3xl font-bold mb-4 subheading">Recent News</h2>
                     <div className="bg-white rounded-lg p-6 overflow-hidden min-h-[400px]">
                         {isLoading ? (
                             <div className="flex justify-center items-center h-[300px]">
@@ -127,7 +127,7 @@ const Events = () => {
                 {/* Events Section */}
                 <div className="flex flex-col items-center max-w-[1400px] mx-auto my-8 px-4">
                     <div className="flex flex-row items-center justify-between w-full mb-4">
-                        <h2 style={{color: LIGHT_CREAM, fontFamily: "Subheading"}} className="text-3xl font-bold">Events</h2>
+                        <h2 style={{color: LIGHT_CREAM}} className="text-3xl font-bold subheading">Events</h2>
                         <Filter setFilter={setFilter} />
                     </div>
                     <EventsDisplay events={filteredEvents} />
