@@ -1,0 +1,15 @@
+{
+  "name": "neurotech-contact-lambda",
+  "version": "1.0.0",
+  "description": "Lambda function to send contact email via Resend",
+  "main": "sendContactEmail.js",
+  "type": "module",
+  "dependencies": {
+    "resend": "^3.5.0" 
+  },
+  "scripts": {
+    "create-zip": "npm install && zip -r ../deployment.zip . -x \"*.zip\""
+  },
+  "author": "",
+  "license": "ISC"
+} 

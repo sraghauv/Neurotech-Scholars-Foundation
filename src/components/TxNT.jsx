@@ -1,29 +1,49 @@
 import React from "react";
 import flyer from "/assets/TNT-Comp2.png";
+import Swal from "sweetalert2";
 
 const TxNT = () => {
+   const API_ENDPOINT = "https://irhd1lkzmi.execute-api.us-east-1.amazonaws.com";
+
    const onSubmit = async (event) => {
       event.preventDefault();
       const formData = new FormData(event.target);
-
-      formData.append("access_key", "eb697724-19ee-45d6-8837-1b7de5c51c39");
-      formData.append("email_to", "newemail@example.com");
-
       const object = Object.fromEntries(formData);
       const json = JSON.stringify(object);
 
-      const res = await fetch("https://api.web3forms.com/submit", {
-         method: "POST",
-         headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-         },
-         body: json,
-      }).then((res) => res.json());
+      try {
+         const res = await fetch(API_ENDPOINT, {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/json",
+            },
+            body: json,
+         });
 
-      if (res.success) {
-         alert("Submission received. Thank you!");
-         event.target.reset();
+         const responseData = await res.json();
+
+         if (res.ok && responseData.success) {
+            Swal.fire({
+               title: "Submission Received!",
+               text: "Thank you for registering!",
+               icon: "success",
+            });
+            event.target.reset();
+         } else {
+            console.error("Form submission failed:", responseData);
+            Swal.fire({
+               title: "Submission Error",
+               text: responseData.error || "Could not submit registration. Please try again later.",
+               icon: "error",
+            });
+         }
+      } catch (error) {
+         console.error("Error submitting form:", error);
+         Swal.fire({
+            title: "Network Error",
+            text: "Could not connect to the server. Please check your connection and try again.",
+            icon: "error",
+         });
       }
    };
 
@@ -78,8 +98,9 @@ const TxNT = () => {
             >
                <form onSubmit={onSubmit}>
                   <div className="input-box">
-                     <label>Club Name</label>
+                     <label htmlFor="txnt-club-name">Club Name</label>
                      <input
+                        id="txnt-club-name"
                         type="text"
                         className="field"
                         placeholder="Enter your club name"
@@ -89,8 +110,9 @@ const TxNT = () => {
                   </div>
 
                   <div className="input-box">
-                     <label>Affiliated University</label>
+                     <label htmlFor="txnt-university">Affiliated University</label>
                      <input
+                        id="txnt-university"
                         type="text"
                         className="field"
                         placeholder="Enter your university name"
@@ -100,8 +122,9 @@ const TxNT = () => {
                   </div>
 
                   <div className="input-box">
-                     <label>Club Representative</label>
+                     <label htmlFor="txnt-representative">Club Representative</label>
                      <input
+                        id="txnt-representative"
                         type="text"
                         className="field"
                         placeholder="Enter the representative's name"
@@ -111,8 +134,9 @@ const TxNT = () => {
                   </div>
 
                   <div className="input-box">
-                     <label>Contact Email</label>
+                     <label htmlFor="txnt-contact-email">Contact Email</label>
                      <input
+                        id="txnt-contact-email"
                         type="email"
                         className="field"
                         placeholder="Enter contact email"
@@ -122,8 +146,9 @@ const TxNT = () => {
                   </div>
 
                   <div className="input-box">
-                     <label>Brief Description of Project (2-3 sentences)</label>
+                     <label htmlFor="txnt-project-desc">Brief Description of Project (2-3 sentences)</label>
                      <textarea
+                        id="txnt-project-desc"
                         name="project_description"
                         className="field mess"
                         placeholder="Describe your project..."
@@ -132,8 +157,9 @@ const TxNT = () => {
                   </div>
 
                   <div className="input-box">
-                     <label>Questions?</label>
+                     <label htmlFor="txnt-questions">Questions?</label>
                      <textarea
+                        id="txnt-questions"
                         name="questions"
                         className="field mess"
                         placeholder="Any questions?"

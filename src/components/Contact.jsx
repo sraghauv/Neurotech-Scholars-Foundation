@@ -4,33 +4,53 @@ import Swal from "sweetalert2";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
+   // Store API endpoint in a variable (consider moving to .env file later)
+   const API_ENDPOINT = "https://irhd1lkzmi.execute-api.us-east-1.amazonaws.com"; // Updated URL
+
    const onSubmit = async (event) => {
       event.preventDefault();
       const formData = new FormData(event.target);
-
-      formData.append("access_key", "eb697724-19ee-45d6-8837-1b7de5c51c39");
-      formData.append("email_to", "newemail@example.com");
-
       const object = Object.fromEntries(formData);
       const json = JSON.stringify(object);
 
-      const res = await fetch("https://api.web3forms.com/submit", {
-         method: "POST",
-         headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-         },
-         body: json,
-      }).then((res) => res.json());
+      // Clear previous alerts/state if necessary (optional)
 
-      if (res.success) {
-         Swal.fire({
-            title: "Message Sent!",
-            text: "We'll get back to you shortly!",
-            icon: "success",
-         });
+      try {
+        const res = await fetch(API_ENDPOINT, { // Use the new API endpoint
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+              // No Accept header needed unless your API specifically requires it
+          },
+          body: json,
+        });
 
-         event.target.reset();
+        const responseData = await res.json(); // Always parse JSON response
+
+        if (res.ok && responseData.success) { // Check HTTP status and success flag
+            Swal.fire({
+              title: "Message Sent!",
+              text: "We'll get back to you shortly!",
+              icon: "success",
+            });
+            event.target.reset();
+        } else {
+           // Handle error response from Lambda/Resend
+           console.error("Form submission failed:", responseData);
+           Swal.fire({
+              title: "Submission Error",
+              text: responseData.error || "Could not send message. Please try again later.",
+              icon: "error",
+            });
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+        // Handle network errors or other fetch issues
+        Swal.fire({
+           title: "Network Error",
+           text: "Could not connect to the server. Please check your connection and try again.",
+           icon: "error",
+        });
       }
    };
 
@@ -71,8 +91,9 @@ const Contact = () => {
          >
             <h2>Contact Us</h2>
             <div className="input-box">
-               <label>Full Name</label>
+               <label htmlFor="contact-name">Full Name</label>
                <input
+                  id="contact-name"
                   type="text"
                   className="field"
                   placeholder="Enter your name"
@@ -81,9 +102,10 @@ const Contact = () => {
                />
             </div>
             <div className="input-box">
-               <label>Email Address</label>
+               <label htmlFor="contact-email">Email Address</label>
                <input
-                  type="text"
+                  id="contact-email"
+                  type="email"
                   className="field"
                   placeholder="Enter your email"
                   name="email"
@@ -91,8 +113,9 @@ const Contact = () => {
                />
             </div>
             <div className="input-box">
-               <label>Organization/Company</label>
+               <label htmlFor="contact-organization">Organization/Company</label>
                <input
+                  id="contact-organization"
                   type="text"
                   className="field"
                   placeholder="Enter your organization"
@@ -101,8 +124,9 @@ const Contact = () => {
                />
             </div>
             <div className="input-box">
-               <label>Your Message</label>
+               <label htmlFor="contact-message">Your Message</label>
                <textarea
+                  id="contact-message"
                   name="message"
                   className="field mess"
                   placeholder="Enter your message"
