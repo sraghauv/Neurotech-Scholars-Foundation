@@ -1,15 +1,16 @@
 {
-  "name": "neurotech-contact-lambda",
+  "name": "submit-competition-entry",
   "version": "1.0.0",
-  "description": "Lambda function to send contact email via Resend",
-  "main": "sendContactEmail.js",
-  "type": "module",
+  "description": "Lambda function for handling Texas Neurotech Competition submissions",
+  "main": "index.js",
+  "type": "commonjs",
   "dependencies": {
-    "resend": "^3.5.0" 
+    "resend": "^3.2.0",
+    "@aws-sdk/client-s3": "^3.699.0",
+    "@aws-sdk/s3-request-presigner": "^3.699.0",
+    "uuid": "^11.0.3"
   },
   "scripts": {
-    "create-zip": "npm install && zip -r ../deployment.zip . -x \"*.zip\""
-  },
-  "author": "",
-  "license": "ISC"
+    "build": "zip -r deployment.zip index.js submitLargeFile.js package.json node_modules/"
+  }
 } 

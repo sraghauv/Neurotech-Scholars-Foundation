@@ -1,0 +1,16 @@
+{
+  "name": "submit-competition-entry",
+  "version": "1.0.0",
+  "description": "Lambda function for handling Texas Neurotech Competition submissions",
+  "main": "submitCompetitionEntry.js",
+  "type": "module",
+  "dependencies": {
+    "resend": "^3.2.0",
+    "@aws-sdk/client-s3": "^3.699.0",
+    "@aws-sdk/s3-request-presigner": "^3.699.0",
+    "uuid": "^11.0.3"
+  },
+  "scripts": {
+    "build": "zip -r deployment.zip submitCompetitionEntry.js package.json node_modules/"
+  }
+} 

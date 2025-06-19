@@ -35,6 +35,12 @@ const Navbar = () => {
                      TxNT
                   </Link>
                   <Link
+                     to="/submit"
+                     className="text-2xl text-[#F4f1de] font-['Antonio'] px-4 py-2 rounded-md hover:bg-[#FFEBAD] hover:bg-opacity-75 hover:text-[white] transition-colors duration-200 bg-[#FF6B6B] bg-opacity-20 border border-[#FF6B6B]"
+                  >
+                     Submit Entry
+                  </Link>
+                  <Link
                      to="/about"
                      className="text-2xl text-[#F4f1de] font-['Antonio'] px-4 py-2 rounded-md hover:bg-[#FFEBAD] hover:bg-opacity-75 hover:text-[white] transition-colors duration-200"
                   >
@@ -74,6 +80,13 @@ const Navbar = () => {
                }}
             >
                <div className="flex flex-col p-4 space-y-2">
+                  <Link
+                     to="/submit"
+                     className="text-xl py-3 px-4 hover:bg-gray-100 rounded-md transition-colors duration-200 text-primary bg-red-50 border border-red-200"
+                     onClick={() => setIsOpen(false)}
+                  >
+                     Submit Entry
+                  </Link>
                   <Link
                      to="/about"
                      className="text-xl py-3 px-4 hover:bg-gray-100 rounded-md transition-colors duration-200 text-primary"
